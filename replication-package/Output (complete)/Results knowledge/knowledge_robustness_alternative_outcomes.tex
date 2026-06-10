@@ -1,0 +1,47 @@
+\begin{table}[htbp]
+\centering
+\caption{Robustness checks using alternative knowledge measures}
+\label{tab:knowledge_robustness_alternative_outcomes}
+\fontsize{7pt}{8.4pt}\selectfont
+\begin{tabular}{lcccc}
+\hline
+\hline
+\bottomrule
+\rule{0pt}{1.2em} & \multicolumn{2}{c}{\textbf{Grade 0-1}} & \multicolumn{2}{c}{\textbf{Grade 0-3}} \\
+\cline{2-3} \cline{4-5}
+\rule{0pt}{1.2em} & (1) & (2) & (3) & (4) \\
+\hline
+\multicolumn{1}{l}{\textbf{\rule{0pt}{1.2em}VARIABLES}} &  &  &  &  \\
+\hline
+\\
+Lecture & \num{2.891}*** &  & \num{4.226}*** &  \\
+ & (\num{0.680}) &  & (\num{0.824}) &  \\
+Game & \num{2.557}*** & \num{-0.317} & \num{3.732}*** & \num{-0.441} \\
+ & (\num{0.683}) & (\num{0.182}) & (\num{0.858}) & (\num{0.238}) \\
+Male & \num{0.119} & \num{-0.070} & \num{0.145} & \num{-0.057} \\
+ & (\num{0.323}) & (\num{0.325}) & (\num{0.397}) & (\num{0.412}) \\
+Prefer not to say the gender & \num{-0.203} & \num{0.269} & \num{-0.686} & \num{-0.180} \\
+ & (\num{0.366}) & (\num{0.523}) & (\num{0.688}) & (\num{1.126}) \\
+Age & \num{0.017} & \num{0.204} & \num{-0.137} & \num{-0.079} \\
+ & (\num{0.308}) & (\num{0.299}) & (\num{0.331}) & (\num{0.366}) \\
+Board games & \num{0.038} & \num{-0.013} & \num{-0.032} & \num{-0.034} \\
+ & (\num{0.095}) & (\num{0.101}) & (\num{0.124}) & (\num{0.126}) \\
+Cognitive ability & \num{0.161} & \num{0.264} & \num{0.418} & \num{0.556}* \\
+ & (\num{0.172}) & (\num{0.186}) & (\num{0.242}) & (\num{0.253}) \\
+Baseline knowledge & \num{0.668}*** & \num{0.515}*** & \num{1.237}*** & \num{1.089}*** \\
+ & (\num{0.186}) & (\num{0.134}) & (\num{0.164}) & (\num{0.174}) \\
+\\
+\hline
+\rule{0pt}{1.2em}Fixed Effects & Yes & Yes & Yes & Yes \\
+Controls & Yes & Yes & Yes & Yes \\
+Num.Obs. & \num{208} & \num{170} & \num{208} & \num{170} \\
+R2 & \num{0.446} & \num{0.372} & \num{0.471} & \num{0.391} \\
+\\
+\bottomrule
+\hline
+\hline
+\end{tabular}
+{\begin{flushleft}\parbox{\textwidth}{\tiny \hspace*{0.1cm}
+\textit{Notes:}} Each column reports an OLS model with school and grade fixed effects. Columns (1) and (3) use the full sample, while columns (2) and (4) restrict the sample to Lecture and Game only. The omitted category is Control in columns (1) and (3), and Lecture in columns (2) and (4). Standard errors clustered at the \texttt{cluster\_id} level are reported in parentheses. Significance markers are based on conventional clustered p-values. *** $p < 0.01$, ** $p < 0.05$, * $p < 0.1$.
+\end{flushleft}}
+\end{table}

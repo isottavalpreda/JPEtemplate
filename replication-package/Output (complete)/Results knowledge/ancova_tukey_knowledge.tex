@@ -1,0 +1,32 @@
+\begin{table}[ht]
+\centering
+\caption{ANCOVA and Tukey Post-Hoc Results for the Knowledge Score}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Source} & \textbf{Df} & \textbf{Sum Sq} & \textbf{Mean Sq} & \textbf{F-value} & \textbf{Pr($>F$)} \\
+\midrule
+Treatment & 2 & 261.7 & 130.85 & 33.720 & <1e-04 *** \\
+Gender & 2 & 1.1 & 0.53 & 0.136 & 0.872 \\
+Age & 1 & 0.5 & 0.55 & 0.141 & 0.707 \\
+Board games experience & 1 & 0.0 & 0.00 & 0.001 & 0.976 \\
+Riddles & 1 & 9.0 & 9.00 & 2.319 & 0.129 \\
+Baseline knowledge & 1 & 132.1 & 132.14 & 34.053 & <1e-04 *** \\
+School & 2 & 37.8 & 18.88 & 4.865 & 0.00866 *** \\
+Cohort & 1 & 1.0 & 1.00 & 0.257 & 0.613 \\
+Residuals & 196 & 760.6 & 3.88 & --- & --- \\
+\midrule
+\multicolumn{6}{l}{\textbf{Tukey HSD Post-Hoc Comparisons for Gruppo}} \\
+\midrule
+Contrast & Estimate & Std. Error & t-ratio & p-adj & \\
+\midrule
+Game -- Control & 3.106 & 0.414 & 7.506 & <1e-04 *** &  \\
+Lecture -- Control & 3.347 & 0.433 & 7.738 & <1e-04 *** &  \\
+Lecture -- Game & 0.241 & 0.314 & 0.767 & 0.828 &  \\
+\bottomrule
+\end{tabular}
+\label{tab:ancova_tukey}
+{\begin{flushleft}\parbox{\textwidth}{\tiny \hspace*{0.1cm}
+\textit{Notes:}} The table reports the result for the ANCOVA and Tukey test without the use of cluster bootstrap standard errors.
+\item \sym{*} $p<0.1$, \sym{**} $p<0.05$, \sym{***} $p<0.01$.
+\end{flushleft}}
+\end{table}

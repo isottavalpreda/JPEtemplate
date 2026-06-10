@@ -1,0 +1,54 @@
+\begin{table}[htbp]
+\centering
+\caption{Regression coefficients for attitudes}
+\label{tab:attitudes_two_panel}
+\fontsize{7pt}{8.4pt}\selectfont
+\begin{tabular}{lcccccc}
+\hline
+\hline
+\rule{0pt}{1.2em} & \multicolumn{2}{c}{\textbf{Cooperation}} & \multicolumn{2}{c}{\textbf{Saliency of technologies}} & \multicolumn{2}{c}{\textbf{Proximity of extreme events}} \\
+\cline{2-3} \cline{4-5} \cline{6-7}
+\rule{0pt}{1.2em} & (1) & (2) & (3) & (4) & (5) & (6) \\
+\hline
+\multicolumn{1}{l}{\textbf{VARIABLES}} & \multicolumn{2}{c}{Reference: No} & \multicolumn{2}{c}{Reference: No} & \multicolumn{2}{c}{Reference: No} \\
+\rule{0pt}{1.1em} & DK & Yes & DK & Yes & DK & Yes \\
+\hline
+\\
+\multicolumn{7}{l}{\textbf{Panel A. Full sample}} \\
+\hline
+Lecture & \num{-17.602}*** & \num{-0.847} & \num{-0.479} & \num{-0.679} & \num{0.144} & \num{-0.821} \\
+ & (\num{0.699}) & (\num{0.855}) & (\num{0.573}) & (\num{0.664}) & (\num{0.553}) & (\num{0.521}) \\
+Game & \num{-0.296} & \num{-0.936} & \num{-0.284} & \num{-0.469} & \num{-0.066} & \num{-0.250} \\
+ & (\num{1.425}) & (\num{0.833}) & (\num{0.553}) & (\num{0.645}) & (\num{0.540}) & (\num{0.476}) \\
+Post & \num{-0.102} & \num{-1.633}* & \num{-0.095} & \num{-0.685} & \num{-0.234} & \num{-0.270} \\
+ & (\num{1.447}) & (\num{0.866}) & (\num{0.642}) & (\num{0.758}) & (\num{0.638}) & (\num{0.543}) \\
+Post $\times$ Lecture & \num{16.275}*** & \num{1.764} & \num{-0.054} & \num{1.928} & \num{-0.164} & \num{0.453} \\
+ & (\num{0.699}) & (\num{1.001}) & (\num{0.783}) & (\num{0.911}) & (\num{0.764}) & (\num{0.693}) \\
+Post $\times$ Game & \num{-1.728} & \num{1.371} & \num{-0.402} & \num{1.644} & \num{0.059} & \num{-0.242} \\
+ & (\num{1.863}) & (\num{0.960}) & (\num{0.752}) & (\num{0.883}) & (\num{0.742}) & (\num{0.654}) \\
+\hline
+Fixed Effects & Yes & Yes & Yes & Yes & Yes & Yes \\
+Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+Num.Obs. & \num{417} & \num{417} & \num{417} & \num{417} & \num{417} & \num{417} \\
+AIC & \num{441.02} & \num{441.02} & \num{820.20} & \num{820.20} & \num{865.24} & \num{865.24} \\
+\\
+\multicolumn{7}{l}{\textbf{Panel B. Lecture vs Game}} \\
+\hline
+Game & \num{10.765}*** & \num{-0.100} & \num{0.183} & \num{0.083} & \num{-0.147} & \num{0.617} \\
+ & (\num{3.245}) & (\num{0.479}) & (\num{0.390}) & (\num{0.489}) & (\num{0.390}) & (\num{0.403}) \\
+Post & \num{9.808}*** & \num{0.144} & \num{-0.168} & \num{1.175}** & \num{-0.391} & \num{0.211} \\
+ & (\num{3.303}) & (\num{0.512}) & (\num{0.445}) & (\num{0.492}) & (\num{0.417}) & (\num{0.427}) \\
+Post $\times$ Game & \num{-11.815}*** & \num{-0.408} & \num{-0.333} & \num{-0.221} & \num{0.216} & \num{-0.730} \\
+ & (\num{3.430}) & (\num{0.665}) & (\num{0.590}) & (\num{0.658}) & (\num{0.561}) & (\num{0.561}) \\
+\hline
+Fixed Effects & Yes & Yes & Yes & Yes & Yes & Yes \\
+Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+Num.Obs. & \num{340} & \num{340} & \num{340} & \num{340} & \num{340} & \num{340} \\
+AIC & \num{340.85} & \num{340.85} & \num{683.79} & \num{683.79} & \num{713.92} & \num{713.92} \\
+\hline
+\hline
+\end{tabular}
+{\begin{flushleft}\parbox{\textwidth}{\tiny \hspace*{0.1cm}
+\textit{Notes:}} Table reports multinomial logit DID estimates for the three attitude questions. Each pair of columns corresponds to one attitude outcome, with No as the omitted response category; columns labelled DK and Yes report coefficients for DontKnow and Yes relative to No. Panel A reports the full sample, where the omitted treatment category is Control. Panel B reports the treated sample only, where the omitted treatment category is Lecture; accordingly, the coefficients on Lecture and Post $\times$ Lecture are not identified and are left blank. The omitted time period is PRE. Standard errors are the model-based standard errors from the multinomial logit. Bonferroni correction is applied to the DID interaction coefficients using the pre-specified families described in the text. *** $p < 0.01$, ** $p < 0.05$, * $p < 0.1$.
+\end{flushleft}}
+\end{table}

@@ -1,0 +1,677 @@
+%% 
+%% Copyright 2007-2025 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.3 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+%% $Id: elsarticle-template-num.tex 272 2025-01-09 17:36:26Z rishi $
+%%
+\documentclass[preprint,12pt]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%%\documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%%\documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%%\documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%%\documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%%Codice per eliminare la scritta preprint
+\makeatletter
+\def\ps@pprintTitle{}
+\makeatother
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsmath package provides various useful equation environments.
+\usepackage{amsmath}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+\usepackage{booktabs,threeparttable,makecell}
+\usepackage[margin=2.5cm]{geometry}
+
+%%Package to have quotes
+\usepackage{csquotes}
+\usepackage{siunitx}
+
+%To insert pdf
+\usepackage{pdfpages}
+\usepackage{subfiles}
+
+  \usepackage{booktabs,threeparttable,makecell}
+  \newcommand{\sym}[1]{\textsuperscript{#1}}
+  \newcommand{\msd}[2]{\makecell{#1 \\ (#2)}}
+  \newcommand{\estse}[3]{\makecell{#1\sym{#3} \\ (#2)}}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+%\journal{Nuclear Physics B}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \affiliation for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \affiliation{organization={},
+%%             addressline={},
+%%             city={},
+%%             postcode={},
+%%             state={},
+%%             country={}}
+%% \fntext[label3]{}
+
+\title{Building Early Support for Water Conservation Policies through Game-Based Learning: Evidence from a Randomized Experiment} %% Article title
+
+%%Subtitle
+\newcommand{\subtitle}[1]{%
+    \begin{center}
+        \large\textit{#1}
+    \end{center}
+}
+\maketitle
+\subtitle{Working Paper -
+Please do not disclose}
+
+%% use optional labels to link authors explicitly to addresses:
+\author[label1]{Stella Lauro\corref{cor1}\fnref{label2}}
+\author[label3]{Leonardo Boncinelli}
+
+%% Author affiliation
+\affiliation[label1]{organization={University of Turin, Department of Economics and Statistics "Cognetti de Martiis"},%Department and Organization
+            addressline={Lungo Dora Siena, 100}, 
+            city={Torino},
+            postcode={10128}, 
+            %state={},
+            country={Italy}}
+\affiliation[label2]{organization={Collegio Carlo Alberto},
+            addressline={Piazza Vincenzo Arbarello, 8},
+             city={Torino},
+             postcode={10128},
+             %state={},
+             country={Italy}}
+
+\affiliation[label3]{organization={University of Florence, Dipartimento di Scienze per l'Economia e l'Impresa},
+             addressline={Via delle Pandette, 32},
+             city={Firenze},
+             postcode={50127},
+             %state={},
+             country={Italy}}
+\cortext[cor1]{Corresponding author at: Department of Economics and Statistics "Cognetti de Martiis", University of Turin, Turin, 10128, Italy. \textit{Email address}: stella.lauro@unito.it}
+
+
+%% Abstract
+\begin{abstract}
+Climate change is increasingly exacerbating water scarcity. A shift in water-related behaviors is necessary to face this challenge, underscoring the importance of effective early-life education on sustainable water use. Serious games have been proposed as promising tools to enhance engagement and promote pro-environmental behaviors. This paper evaluates the impact of a classroom-based educational board game on water-related knowledge, behaviors, and attitudes among primary school students.
+We conducted a randomized controlled trial involving approximately 220 fourth- and fifth-cohort students in three primary schools in Turin, Italy. Classes were randomly assigned to one of three conditions: a game-based intervention, a lecture covering the same content, or a pure control group. Outcomes were measured through pre- and post-treatment surveys and a two-week follow-up.
+Both the game and the lecture substantially increased students’ knowledge relative to the control group, with no statistically significant differences between the two active treatments. In contrast, only the game-based intervention led to significant short-run improvements in self-reported water-conservation behaviors. Analysis of experiential mechanisms reveals high levels of enjoyment and engagement in both treatments, which might explain the absence of significant differences among the treatments.
+These findings suggest that while traditional instruction and games are equally effective in transmitting knowledge, game-based learning may be particularly well suited to translating information into behavioral change.
+\end{abstract}
+
+%%Graphical abstract
+%\begin{graphicalabstract}
+%\includegraphics{grabs}
+%\end{graphicalabstract}
+
+%%Research highlights
+%\begin{highlights}
+%\item Research highlight 1
+%\item Research highlight 2
+%\end{highlights}
+
+%% Keywords
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+Serious game \sep Environmental Education \sep Game-based learning \sep Experiment
+
+%% PACS codes here, in the form: \PACS code \sep code
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+%% Add \usepackage{lineno} before \begin{document} and uncomment 
+%% following line to enable line numbers
+%% \linenumbers
+
+%% main text
+%%
+
+\section{Introduction}
+\label{sec1}
+%Motivazione, concludere con supporto a policy
+Roughly half of the world's population currently experiences severe water scarcity for at least part of the year, as a result of interacting climatic and non‑climatic drivers such as rising temperatures, changing precipitation patterns, and increasing water demand. Freshwater resources are expected to further decrease due to rising temperatures; increasing weather and climate extreme events have already exposed millions of people to reduced water availability, also through damages to water urban infrastructures \cite{IPCC}. These combined pressures require substantial changes in how societies manage and use existing freshwater resources, in ways that are coherent with the geographical and climatic characteristics of each context \cite{bagliani2019cambiamento}.
+Technologies and policies for sustainable water use have already been implemented in many settings, but psychological and behavioral barriers often limit or delay their adoption \cite{gifford2011behavioral, sanchez2023barriers}. In particular, perceived efficacy, perceived behavioral control and lack of knowledge about the reality of climate change or about specific mitigation behaviors emerge as pivotal determinants of water‑saving behavior, highlighting the need for interventions that explicitly target these dimensions.
+
+
+%Environmental education
+Environmental education aims to create an environmentally literate citizenry able to understand and address resource sustainability issues \cite{ardoin2020early}. Early and middle childhood are formative stages in which attitudes, habits, and cognitive frameworks related to environmental stewardship begin to take shape. This developmental sensitivity is particularly evident for environmental literacy \cite{wilson1996environmental}, which has been conceptualized as comprising four interconnected components: knowledge, dispositions, competencies, and environmentally responsible behavior \citep{hollweg2011framework}. Environmental behavior appears to develop from childhood and to start consolidating from around age 10, whereas environmental attitudes remain in flux at least through adulthood \citep{otto2019development}. Empirical studies show that environmental education can have positive and significant effects on environmental literacy development, cognitive and socio‑emotional outcomes, pro‑environmental attitudes, norm‑related beliefs, and some domains of actual behavior (e.g. recycling, waste sorting, and energy saving) \citep{ardoin2018environmental, ardoin2020early, galeotti2024climate}. From an ecological‑economics perspective, interventions that shape children’s understanding of environmental trade‑off and their sense of agency can contribute to the future social and political support needed for ambitious mitigation and adaptation policies. This is consistent with evidence that attitudes, interests, and non‑cognitive skills formed in childhood and adolescence are strongly associated with later political participation and policy‑relevant behavior \citep{holbein2022promoting, brown2023effect}.
+
+
+%Uso dei giochi in edicazione ambientale
+Traditional environmental education for young learners often relies on lectures and teacher‑centered instruction. Although such approaches can transmit information, they may be less effective in fostering deep conceptual understanding, long‑term engagement, or the kinds of procedural and social competencies emphasized in environmental literacy frameworks. Recent work in education and behavioral sciences has therefore explored a variety of more interactive tools as promising alternatives for climate and sustainability education \cite{ardoin2018environmental, hainey2016systematic, stanitsas2019facilitating}, such as simulations, role‑playing, and serious games. In this context, serious games and game-based learning in particular have emerged as one of the most effective means of supporting learning and engagement in general \cite{hainey2016systematic}, and of promoting sustainability‑related knowledge and reflection in particular \cite{stanitsas2019facilitating, madani2017serious}. By leveraging intrinsic motivational features, interactive visualization, and opportunities for social learning and decision-making practice \cite{aubert2018review}, environmental serious games can effectively enhance public awareness and participation in environmental protection efforts \cite{chen2025impact}. For instance, Panagiotopoulou et al. \cite{panagiotopoulou2021design} designed a digital game on ocean plastic pollution for children in order to create awareness and stimulate pro-environmental behaviors, while Menconi et al. \cite{menconi2025nature} developed a game to analyze young people's awareness of the diversity of urban trees, focusing on aspects such as species diversity (biodiversity), age diversity, unique characteristics, and ecosystem services provision.
+For complex topics such as water scarcity, where multiple technological, behavioral, and environmental mechanisms interact, serious games provide a potentially powerful way to convey trade‑offs and feedback in an intuitive, experiential manner.
+
+%Summary of the paper
+This paper contributes to the literature on environmental and economic education by presenting a novel, low-cost, classroom-ready serious game focused on the nexus between weather, technology, and water availability. The game has been developed following the game play of the famous \enquote{goose game}, introducing novel elements to teach children how the efficacy of water accumulation and water saving technologies varies with climatic conditions. We tested the game among primary school children to evaluate how the game influences their environmental literacy, focusing on dimensions such as knowledge, attitudes and self-declared behavior. 
+
+%Game-based learning on water, hyp 1
+Several studies, in recent years, have evaluated the relevance of serious games that encourage learning about water conservation \cite{medema2019potential}. Cheng and colleagues \cite{cheng2019development} developed an issue-situation-based board game, namely Water Ark, to enhance participants’ knowledge on water resources. They involved a total of 21 students in the experiment, and found a positive, yet not significant effect on knowledge. Robertson \cite{robertson2022increasing} developed a pedagogical tool effective in teaching undergraduate students about the global water cycle terminology through game-based learning. Recently, Garcia et al. \cite{garcia2025evaluating} have shown how a serious game was effective in educating children about the urban water cycle. The game was played over 7 sessions in four different schools, involving approximately 140 children aged 10 to 11 years and assessed with a pre-post survey. Based on previous results in the literature, we expect the board game to be more effective compared to a traditional lecture in increasing children's knowledge and comprehension \cite{bloom1956taxonomy} of the topics conveyed (Hypothesis 1 - Learning).  
+
+%Game-based behavioral change on water, hyp 2
+Nonetheless, the ultimate goal of our intervention is to overcome the psychological barriers to induce a change in water-related behaviors. Previous studies have found a positive effect of serious games and gamification on water use. Bilancini and colleagues \cite{bilancini2023game} performed a game-based educational program where primary school students were asked to play a game on water use both at school, at home and in special tournaments. The program was found to be effective both in increasing efficient water usage and increase the frequency of discussion about water with their parents, lasting even six months after the intervention. Their results are corroborated also by Di Paolo and Pizziol \cite{di2024gamification}, who found that higher participation in gamified activities among a sample of 800 primary schools students corresponds more likely to a higher increase in reported sustainable behaviors. We therefore expect the game to induce an increase in water conservation self-declared behaviors and positive attitudes compared to the lecture (Hypothesis 2 - Behaviors and Attitudes).
+
+%Mechanisms of game-based learning, hyp 3
+Mayer and colleagues \cite{mayer2012towards} identify as relevant elements for assessing the effectiveness of game-based learning the game design, the game play and the interaction with the facilitator. We expect the game to be more effective for degree of appreciation of the design of the activity, the engagement during the activity itself and the interactions with the peers and the facilitators (Hypothesis 3 - Mechanisms).
+
+%RCT description
+To test our hypothesis, we perform a Randomized Control Trial with three different treatments: (i) game, (ii) lecture, and (iii) pure control. The experiment was run in May 2025 in the City of Turin, and involved classes in the 4° and 5° cohorts in three different primary schools, for a total of around 220 participants. The serious game that we employ, called \enquote{\textit{H2gO!}}, was designed particularly for this intervention. The game highlights real-world mechanisms related to water conservation technologies and behavioral choices, allowing students to explore trade-offs and consequences in an intuitive, playful manner. Both the game and the lecture substantially increased students’ knowledge relative to the control group, with no statistically significant differences between the two active treatments. In contrast, only the game-based intervention led to significant short-run improvements in self-reported water-conservation behaviors. Analysis of experiential mechanisms reveals high levels of enjoyment and engagement in both treatments, which might explain the absence of significant differences among the treatments.
+
+The remainder of the paper is structured as follows. Section~\ref{Methods} provides an overview of the game use for the treatment and the experiment design. Section~\ref{Results} provides the results of the pre-registered analysis and some exploratory results. Section~\ref{Disc} discusses the results obtained and concludes with policy-related implications.
+
+\section{Methods}
+\label{Methods}
+\subsection{Game Design}
+\label{GameDesign}
+
+For the experimental treatment, we adopt a semi-cooperative board game called \textit{H2gO!}, specifically designed for this study. The game was conceived and prototyped by the authors (Lauro, WP), and tested first with Ph.D. colleagues and subsequently with children aged 7 to 11 years—the target group of the experiment. The purpose of the game is to facilitate understanding of the nexus between weather, technology, and water availability, and to promote reflection on sustainable water use behaviors.
+
+
+The structure of the game follows the traditional “goose game” format. Each player has a token that moves along a path on the board according to the result of a dice roll. The goal is to reach the end of the path before the other players, taking advantage of ladders that allow faster progression when possible. The key modifications introduced in \textit{H2gO!} are the inclusion of three elements related to the topic of water management: (i) water resources, (ii) weather, and (iii) technologies (Figure~\ref{game}).
+
+\paragraph{Water Resource}
+At the beginning of the game, each player receives a fixed number of water cards, which must be spent to advance—one card per step. The initial endowment is insufficient to reach the end of the path, illustrating the concept that water is a finite resource. Players must therefore balance current and future consumption, deciding when to use or conserve their resources. Additional water cards can be obtained during the game through a combination of favorable weather and technological choices.
+
+The game introduces a semi-cooperative component: participants play in pairs and may exchange water cards when one of them runs out. Cooperation is incentivized because victory is achieved by the first pair that reaches the end of the path. Resource exchange is allowed when one player lacks the water required to move forward or to pay for an extreme event (see below). This mechanism mirrors the real-world trade-off between individual and collective water consumption—when one actor overuses the resource, less remains available for others.
+
+\paragraph{Weather}
+Several “special boxes” on the board represent weather conditions (e.g., sun, rain, clouds). When a player lands on one of these, they draw a weather card, which can depict one of four possible conditions: \textit{sun}, \textit{rain}, \textit{drought}, or \textit{flooding}. Weather cards affect all players simultaneously and have a one-time effect. 
+
+Sun and rain represent baseline conditions with positive effects that increase water availability, depending on the technologies adopted by each player. Droughts and floods represent extreme weather events that reduce available water. In these cases, some technologies can be adopted to mitigate losses. The loss of water under drought conditions simulates depletion due to prolonged high temperatures, whereas flooding represents contamination of water sources caused by overflow or infrastructure failure. When one of these two scenarios is picked, every player loses some water resource cards.
+
+Extreme weathers can also influence one another: if the drought happens right before a flooding, the negative effect of flooding is larger than usual; if the drought happens right after a flooding, the effect of the drought is less intense. After a drought, the soil is more dry and therefore it will have a smaller capacity to actually absorb rain and runoff waters, leading to a higher possibility of flooding events. At the same time, after a flooding the plants have absorb tons of water and can better resist to high temperatures.
+%Aggiungere reference e rivedere testo
+
+\paragraph{Technology}
+Other special boxes on the board represent technological opportunities, identified by a well icon. When a player lands on such a box, they draw a technology card, which presents two options: one that increases water-use efficiency, and one that enhances water accumulation. Players choose one option, which remains active for the rest of the game. Technologies are based on real-world examples applicable to the Italian context of the experiment and are categorized according to their level of implementation:
+\begin{enumerate}
+    \item \textbf{Household level:} (i) collect rainwater to water plants; (ii) reduce clothing purchases to lower the water footprint and increase efficiency during sunny periods.
+    \item \textbf{Firm level:} (i) dig small holes to collect rainwater for irrigation; (ii) reuse water to cool machinery, increasing efficiency.
+    \item \textbf{City level:} (i) build green areas or rain gardens to improve infiltration; (ii) repair urban water pipes or mandate grey-water treatment in buildings.
+\end{enumerate}
+
+Each player starts the game with one technology card and may acquire additional ones during play. To prevent a single player from accumulating too many technologies, a rule requires players to spend three water cards for each technology acquired after the third one. 
+
+To ensure independent learning, the game was designed to be self-explanatory, without requiring adult supervision. The text on the cards was standardized to ensure comparable information content across technologies, while the two city-level cards include slightly more detail due to their higher complexity. Players were asked to read their cards aloud to ensure equal information sharing within pairs. To assess real-time learning, players were required to answer short factual questions (e.g., “Which technologies are effective during rain?” or “What is grey water?”) before taking a ladder.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Game activity.jpeg}
+    \caption{\textbf{Board Game during the experiment activity.} The board depicts special boxes with wells (technology cards), weather conditions (weather cards) and some ladders. To ensure accessibility and inclusivity, the game design used the OpenDyslexic font and a color-blind friendly palette created with AdobeColor.}
+    \label{game}
+\end{figure}
+
+
+\subsection{Experimental Design}
+The experiment has been pre-registred on the 4th of May 2025 trough OSF (registration number: X4zuk), after collecting participation from schools but prior to the activities. The experiment has been approved by the Bioethics Committee of the University of Turin on the 15th of April 2025 (protocol n. 0336761). Anonymous responses to the surveys and R scripts will be made available on a GitHub repository.
+
+The experiment was structured as a randomized controlled trial (RCT) with three treatment arms.
+Four primary schools located in the Metropolitan City of Turin were invited to participate through an email sent to school principals. The four schools contacted were not randomly selected from the overall population, but represent a convenience sample based on availability of direct contact with the principals. The population from which the sample was drawn therefore consists of all children aged 8 to 10 years enrolled in those primary schools. Participation was conditional on voluntary acceptance by the school and the class teachers.
+
+Out of the contacted schools, three agreed to participate, for a total of twelve classes across cohort four and five. An additional class of the third cohort was included for a separate focus group aimed at qualitatively exploring the behavioral mechanisms underlying Hypothesis~2. The focus group discussions were not part of the experimental evaluation but served as qualitative triangulation; notes were taken during the sessions.
+
+Randomization was clustered at the class level with the sample being stratified by school and cohort, so that classes of the same school and cohort were randomly assigned to one of the three experimental conditions: (\textit{i}) Game treatment, (\textit{ii}) Lecture treatment, or (\textit{iii}) Pure control. When only two classes from the same school participated, random assignment was restricted to the first two conditions. The treatment was clustered at the class level to account by design for potential differences among schools (see \ref{tab:balance_three_groups}); it was not randomized at the individual level to avoid spillovers between same class members.
+The experiment was conducted by the same two researchers in all sessions, who alternated roles as Experiment Facilitators across treatments to ensure procedural consistency. Participation was voluntary, and all classes were self-selected into the study following the invitation email. Importantly, this applies to all treatment arms, including the control group. This design minimizes potential selection bias due to teachers’ motivation or willingness to participate, as within each school, the decision to join the experiment was made collectively by the same teaching staff. It was also common knowledge for the teaching staff that all classes would be able to participate to the game and the lecture at some point in time. We agreed with the teachers that the control group would receive the treatments, both the game and the lecture, only after the final survey. This allowed us to maintain the interest in participation also from the control group.
+
+
+Participants and teachers were informed that the activity was part of a study on environmental education. However, the specific objective of comparing different teaching methods was not disclosed ex ante to prevent expectancy effects. Children were informed of their assigned activity only at the beginning of the session.
+
+
+The activities were carried out during the same day for each school involved in the experiment. Teachers were asked to arrange the daily class activity so that the interaction between different classes from the moment of the first survey and the moment of the final survey was minimized (e.g. breaks were taken at different times for each class involved in the experiment). This was done to reduce potential spillovers between groups on the first day of activity. Yet, the experiment has been designed over two days of activity, taking place two weeks one after the other (see Timeline \& Surveys).
+The assumption that only the treated are affected (SUTVA) does not hold, but potential spillovers would have a positive effect, therefore the estimated treatment effect would be downward bias. Still, we account for the spillovers in the econometric analysis in Subsection \ref{Behavior}.
+
+\paragraph{Treatment 1: Game}
+In the first treatment, participants played the educational board game \textit{H2gO!}, described in Section~\ref{GameDesign}. Each session lasted approximately 30 minutes of game play, with around 15 minutes before and after to prepare the materials and the tables where to dispose the game. The two researchers acted as Experiment Facilitators, introducing the rules and assisting players during the game. Each class (around 20 students) was divided into two groups, and students played in groups of two or three, that acted as single players. Each group cooperated with another group, allowing the participation of 16–24 children simultaneously. The groups were created endogenously by the children, so that they could play with their friends. While this does not follow a random allocation, it better replicates would would happen in reality if children were to play autonomously. When the children were not able to decide in short time whit whom to play, we formed the group based on how they were sitting in the class - keep kids that were sitting close to each other in the same group.
+During the gameplay, participants were instructed to read their cards aloud to ensure uniform access to information.
+
+
+\paragraph{Treatment 2: Lecture}
+The second treatment consisted of a 30-minute lecture on water conservation, focusing on the interconnection between climate, technology, and water availability. The lecture was interactive: children were periodically asked to answer short questions to maintain engagement. A PowerPoint presentation was used to support the lecture, replicating the same definitions and concepts presented in the game to ensure content equivalence across treatments (see Appendix). Fonts and colors were chosen to be dyslexia- and color-blind–friendly, following the same accessibility design as the game materials. The lecture also made use of some materials, such as a glass of water, to make some examples with the help of some physical materials to which the children could rely and recall more easily. In particular, the glass of water was used to explain the concept that of the overall water in the globe, only 1\% is freshwater that is available for use to drink and use - therefore 1 glass over 100. Moreover, the glass of water was also used to explain what happens to the stock of freshwater available depending on the weather and the technologies that we use: when there is a sunny day, the water in the glass diminishes, while when there is a flooding it increases so much that the glass cannot contain it all; with accumulation technologies we switch the glass with a box that can hold more water when it rains, while with efficiency technologies we keep more water in the glass by using it better.
+The lecture was held by the same two researchers who acted as game facilitators in the Treatment 1.
+%Super lecture! è da mettere in evidenza che è stata figa
+%Spiegare meglio il percorso della lezione
+
+\paragraph{Treatment 3: Control}
+The third arm served as a pure control group and did not receive any treatment at the time of the first data collection. Control classes completed the same surveys as the treated groups but were exposed to the educational activities only after the two-weeks follow up survey, to ensure ethical fairness and maintain interest in participation. At the time of accepting to participate in the experiment, all teachers were aware that their classes would have received both treatments regardless of the treatment arm they would end up in, to allow for self-selection also of the control group.
+
+
+\paragraph{Timeline and Surveys}
+Each session lasted approximately one hour and a half in total, including the administration of the surveys. All survey are reported in the \ref{survey}.
+On the first day, participants completed two questionnaires. The first, administered immediately before the treatment (\textit{Pre-Behavior and Attitudes Survey}), collected demographic information, self-reported behaviors, attitudes toward water conservation, prior knowledge of the topic, and included simple cognitive tasks. Self-reported behaviors are measured using a 5-point likert scale, and are aggregated with a simple sum. Attitudes were proxied with three questions regarding (i) the willingness to lend water to friends, (ii) the perceived saliency of technological interventions to increase water efficiency and storage and (iii) the perceived proximity of climate-change related natural disasters such as floodings and droughts. Responses were coded as $-1$ (“No”), $0$ (“Don’t know”), and $1$ (“Yes”). Changes between pre- and post-intervention were computed as the difference between post and pre responses, allowing larger values to reflect stronger directional changes. We decided to model the responses in this way to capture also the changes for those participants for which the intervention had the effect to shift their responses from \enquote{I don't know} to \enquote{Yes} or \enquote{No}, which would have been lost if we had dropped the \enquote{Don't know} observations.
+
+The second questionnaire, administered immediately after the treatment (\textit{Knowledge and Mechanisms Survey}), assessed short-term learning outcomes and students’ engagement with the intervention. Acquired knowledge was measured using eight multiple-choice questions and two open-ended questions. Responses to the open-ended questions were evaluated using ChatGPT to ensure a consistent and independent scoring procedure. In the main specification, each open-ended response was assigned a score ranging from 0 to 2; robustness checks using alternative scoring ranges will be included.
+The underlying mechanisms were assessed through seven questions measured on 5-point Likert scales. In addition, the survey included a question on self-perceived acquired knowledge, also measured on a 5-point Likert scale.
+
+Two weeks later, participants completed a follow-up survey (\textit{Post-Behavior and Attitudes Survey}), which repeated the same questions on behavior and attitudes to measure changes over time. This follow-up also included two items designed to identify possible spillover effects among schoolmates.
+
+Surveys were administered by the teachers themselves to minimize potential biases due to the presence of the two researchers in the class. We were aware that there could also the teachers could be biased, for example because they wanted to show us that their class was performing better than others. To limit this effect, before every survey we reminded them that the aim of the surveys was to get a proper sense of how effective our interventions were, rather than how good the student were.
+
+
+
+Figure \ref{timeline} illustrates an example of how activities were organized. Within each school, all activities were carried out on the same day, so that both treated groups received their respective interventions within the same school day.
+At the beginning of the school day, each participating class was asked to complete the Pre-Behavior and Attitudes Survey during the morning. Since survey administration was conducted by the teachers in the absence of the researchers, we do not observe the exact time at which the questionnaires were completed. However, before delivering the treatment, we verified that the survey had been fully completed by the class.
+Immediately after the treatment, students completed the Knowledge and Mechanisms Survey. The only exception was the control group, which received the Knowledge and Mechanisms Survey together with the Pre-Behavior and Attitudes Survey at the beginning of the day. In this case, teachers were given clear instructions regarding the order in which the surveys had to be administered. The Knowledge and Mechanisms Survey had to be completed right after the treatment to avoid spillovers; the time of completion of the survey therefore different between the classes, which might have introduced some bias due to different level of attention during the day which we cannot control for.
+
+Exactly two weeks later, we returned to the same schools and administered the Post-Behavior and Attitudes Survey at the beginning of the school day. As with the baseline survey, this questionnaire had to be completed during the morning and before the start of any experimental activities. Completion of this survey marked the end of the experimental evaluation period.
+Finally, to maintain participation incentives for the control group and to ensure ethical fairness, all classes received the intervention they had not been assigned during the experimental phase. Specifically, control classes participated in both the lecture and the game after the final survey, while treated classes received the alternative activity.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Schermata 2025-12-17 alle 12.57.11.png}
+    \caption{\textbf{Example timeline of activities}}
+    \label{timeline}
+\end{figure}
+
+The research design accounted for the possibility of random attrition due to kids being sick in day 1 or day 2 of activity, which should not bias the results. During the experiment, researchers encountered two more types of attrition. First of all, some students entered the class or exited the class in between the activity, not completing the whole experiment or missing one of the two surveys for the first day; to keep this into account, the results should be considered as an Intention-to-treat when the whole sample is used; the treatment effect is estimated only when selecting those units for which we have all the observations. Secondly, in one class the teacher forgot to hand in the first survey (Pre-Behavior and Attitudes Survey), which resulted in not having also the demographic information of the class to be used as control and which made useless the post behavior survey (Post-Behavior and Attitudes Survey); this attrition cannot be considered random, since it might be due to a lack of interest in the topic from that teacher which could be reflected in a lower pre-environmental knowledge and behavior in the students of such class. Fortunately, this class was assigned to the control group, not biasing our main comparison which is the one between Treatment 1 and Treatment 2. Since the first survey included demographic information used as controls in our analysis, the class is excluded from the specifications were we employ controls, as well from the self-reported behavior analysis. 
+
+%Attrition: se i bambini sono malati è random quindi no prod. Abbiamo però il problema della classe di 4 che non ha risposto -> ci salva il fatto che a noi interessa principalmente la differenza tra gioco e lezione. Guarda comunque i documenti e gli appunti presi con Baghel
+
+
+% Results
+
+\section{Results}
+\label{Results}
+\subsection{Descriptive}
+
+\subfile{Descriptive/balance_table}
+
+%External validity: anche se abbiamo usato un convenience sample, le scuole non sono omogenee
+This section presents descriptive evidence on baseline balance across treatment arms and schools, as well as unconditional patterns in knowledge and self-reported behaviors before and after the intervention.
+
+
+Table \ref{tab:balance_three_groups} reports means and standard deviations of baseline covariates by treatment arm (Panel A) and by school (Panel B), together with pairwise differences and associated standard errors.
+Overall, the randomization achieved a reasonably good balance across treatment arms, though some differences emerge, as expected given the relatively small sample size and the clustered nature of assignment. Gender composition is similar across groups, with no statistically significant differences between the Game and Lecture arms, and only marginal differences relative to the Control group. Age exhibits small but statistically significant differences between Control and both treatment arms, with treated students being slightly younger on average. This was expected given the selection of the sample: in one of the three schools, only two classes of cohort 4° participated in the experiment, which were assigned to the two treatments. Differences in pre-treatment exposure to game-related activities are modest; while some pairwise contrasts are statistically significant, their magnitudes are limited and do not suggest large baseline imbalances. Moreover, the difference is not statistically significant between the lecture and game group, which is the main comparison of interest. Cognitive ability is not statistically different within treatment arms, but it is significant across schools, giving supporting evidence to our choice to stratify the treatment per school and motivate the inclusion of school fixed effect in the main specifications.
+Pre-intervention knowledge levels are somewhat lower in the Game group compared to Control and Lecture. This might have a negative impact on the intervention, causing a negative bias in our estimates. Yet, imbalances are consistent with chance and are addressed in the regression analysis through the inclusion of baseline controls and stratification variables. Standard errors in all subsequent analyses are clustered at the class level, in line with the unit of treatment assignment.
+
+
+Considering only the multiple-choice questions of the Knowledge and Mechanisms Survey, the average score to the Knowledge Survey was 4.40 (2.09 sd) for the control group, 6.93 (2.30 sd) for the treatment with the game and 7.62 (2.42 sd) for the treatment with the lecture, out of a maximum of 8 points.
+Figure \ref{know} displays the proportion of correct answers for each of the eight knowledge questions, by treatment group. Several patterns emerge. Both treatment arms, game and lecture, exhibit consistently higher shares of correct answers relative to the control group across most questions. Importantly, these figures are descriptive and do not account for baseline differences or clustering; formal inference is deferred to the regression analysis in the following section.
+
+
+Figure \ref{behavior} reports the distribution of responses to the behavioral survey, before (PRE) and after (POST) the intervention, across treatment groups. Solid bars represent pre-treatment distributions, while dashed-outline bars correspond to post-treatment responses.
+Two main descriptive findings stand out. First, in the pre-treatment survey, response distributions are broadly similar across treatment arms, consistent with the balance evidence reported in Table \ref{tab:balance_three_groups}. Second, post-treatment distributions show shifts toward more pro-environmental behaviors in the treated groups, particularly for behaviors related to water conservation in daily activities (e.g. brushing teeth, washing hands) and communication with peers and parents.
+These shifts are generally more visible in the game and lecture groups than in the control group, with some indication that the game treatment induces larger changes in behaviors involving social interaction, while the Lecture treatment shows clearer shifts in individually framed behaviors. Nonetheless, substantial overlap across distributions remains, underscoring the importance of a difference-in-differences framework and regression-based analysis to isolate causal effects.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Distrib KNOWLEDGE.jpeg}
+    \caption{\textbf{Percentage of correct answers to the knowledge survey, by treatment group.}
+The figure reports, for each of the eight knowledge questions, the proportion of students who provided the correct answer in each treatment group (control, game, lecture). Bars represent mean percentages of correct responses, while the vertical lines indicate the corresponding standard errors.}
+    \label{know}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Distrib BEHAVIOR.jpeg}
+    \caption{\textbf{Distribution of responses to the behavioral survey before and after the intervention, by treatment group.}
+For each behavioral question, the figure displays the distribution of answers across the 5-point Likert scale for the three treatment groups (control, lecture, and game). Solid bars represent the percentage of students selecting each response category in the pre-treatment survey (PRE), while dashed-outline bars indicate the corresponding distributions in the post-treatment survey (POST).}
+    \label{behavior}
+\end{figure}
+
+\subsection{Effects on Knowledge}
+
+To measure the effect on acquired knowledge, we first graded the open-ended questions using chatGPT and then aggregated the results by individual to obtain a final score ranging from 0 to 10.
+Although the pre-registered analysis plan included ANOVA, ANCOVA and nonparametric specifications, the distribution of aggregated knowledge scores—especially in the control group—deviates from normality, as indicated by the Shapiro–Wilk test (\ref{anova}). We therefore relegate the parametric and nonparametric results to Appendix A and focus, in the main text, on methods that are more robust to the observed distributional features. We also present in the Appendix \ref{multilevel} the results form a Multilevel regression model which accounts for the hierarchical structure of our data.
+We also include here as a secondary outcome the self-assessed knowledge, measured using the five-point Liker scale and included as last question in the Mechanism Survey.
+
+
+To estimate the effects of the interventions on acquired knowledge, we run an OLS regression with school and cohort fixed effects, adding individual level control variables. Standard errors are clustered at the class level, which corresponds to the unit of treatment assignment. We correct for multiple testing across specifications using the Bonferroni adjustment for the family of models where the dependent variable is the objective knowledge score. Self-assessed knowledge is analysed as a secondary outcome and is therefore not included in this family.
+
+\[
+Knowledge_{i,c,k,s} = \beta_0 + \beta_1 D_c + \beta_2\textbf{X}_{i,c,k,s} + \phi_s + \psi_k + \eta_{i,c,s}
+\]
+
+%Given the relatively small number of clusters (11 classes, reduced to 9 in some specifications), inference warrants particular caution. While cluster bootstrap methods are often recommended in similar settings \cite{efron1992bootstrap}, recent evidence suggests that bootstrap procedures may inflate Type I error rates when the number of clusters is very small \cite{golzarri2022evaluation}. For this reason, we report both cluster-robust and cluster bootstrap standard errors and emphasize the consistency of results across approaches rather than relying on a single inference method.
+%An alternative approach would be to aggregate outcomes at the cluster level, as suggested in some settings with clustered assignment \cite{athey2017econometrics}. However, such methods are typically recommended for a larger number of clusters and would be poorly suited to our design, given the limited degrees of freedom at the class level. We therefore retain individual-level regressions with appropriate clustering and fixed effects, which strike a balance between statistical power and design-consistent inference.
+
+Table \ref{tab:res_knowledge} reports OLS estimates.
+Columns (1) and (2) present estimates for the full sample, comparing each treatment arm to the pure control group. Columns (3) and (4) restrict the sample to treated students only and directly compare the game and lecture interventions.
+Across specifications, both treatments generate large and statistically significant improvements in knowledge relative to the control group. In the full-sample models, the Lecture treatment increases the knowledge score by more than three points, while the game treatment yields a smaller yet similar effect in magnitude.
+
+\subfile{Results knowledge/knowledge_regression_table}
+
+When directly comparing the two active treatments, we find a small negative difference between the game and lecture (Column (3)). Yet, the difference is not significant when adding individual controls (Column (4)), suggesting that observed characteristics might be driving the difference, particularly our measure of cognitive ability and baseline knowledge. The estimated coefficient suggest that the two pedagogical approaches are similarly effective in improving short-run knowledge outcomes.
+
+
+In the survey, we also ask children how much they think they have learned in the past activity. Both treated groups have high mean values - 4.12 (0.78) and 4.51 (0.75) out of 5, respectively for game and lecture - but the perceived learning is significantly higher in the group treated with the lecture. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Results knowledge/knowledge_questions_bonferroni_plot.pdf}
+    \caption{\textbf{Effects of the educational interventions on knowledge outcomes.}
+This figure reports OLS coefficients from separate regressions estimated for each knowledge question (Q1–Q10). Each panel corresponds to one question. Points represent treatment effects relative to the control group, while horizontal bars indicate 95\% confidence intervals based on standard errors clustered at the classroom level. All specifications include individual controls as well as school and cohort fixed effects. The dashed vertical line denotes zero effect.}
+    \label{k single}
+\end{figure}
+
+Figure \ref{k single} shows the estimated effects of the lecture and game interventions on students’ performance across the ten knowledge questions. Overall, both treatments generate positive effects relative to the control group for half of the questions, with substantial heterogeneity in magnitude across topics.
+The largest effects are observed for questions related to more abstract or less intuitive concepts: the role of water in industrial production (Q6), the definition and reuse of grey water (Q7), and the indirect water footprint of consumption choices (Q9). Also in the first question, which was directly related to the main mechanisms of the intervention, both treatments resulted in a positive effect. Moreover, the treatments increased the knowledge regarding the use of green areas as adaptation strategies during drought or flood events (Q10), but the results are not significant due to high SE. In contrast, effects are smaller and less precisely estimated for questions concerning more familiar or intuitive concepts (e.g. Q2 and Q5). More than 50\% of children in the control group had replied correctly to these questions (77 and 58\%, respectively), suggesting limited scope for learning gains on these items.
+
+Across questions, the lecture intervention tends to produce slightly larger point estimates than the game, although confidence intervals often overlap, indicating that differences between the two treatments are not systematically statistically significant. Taken together, these results suggest that both pedagogical approaches are effective in improving children’s knowledge, particularly for concepts that are less salient in everyday experience.
+
+\subsection{Effects on Behavior and Attitude}
+\label{Behavior}
+
+To analyze the change in behavior, we implement the analysis using a regression on first differences in behavioral outcomes. The dependent variable is the change in the behavioral score between the pre-treatment survey and the follow-up survey administered two weeks after the intervention. Although the pre-registered analysis plan specified a difference-in-differences framework, with only two time periods (pre and post), this approach is algebraically equivalent to a standard difference-in-differences estimator and yields identical point estimates. As noted by \cite{angrist2009mostly}, differencing removes time-invariant individual heterogeneity and is a natural choice in short panels, although standard errors must be adjusted to account for serial correlation in the error term. We address this concern by clustering standard errors at the class level, which corresponds to the unit of treatment assignment.
+
+\[ \Delta Behavior_{i,c,k,s}= \beta_0 + \beta_1D_c+ \beta_2\textbf{X}_{i,c,k,s} + \phi_s + \psi_k + \epsilon_i\]
+Given our design choice to cluster treatments at the class level, it is necessary to keep into account potential spillovers among children of the same school but different classes. During the two weeks period between the pre-treatment survey and the follow-up survey, children had the chance to interact, failing the SUTVA assumption. Assuming that the impacts of the treatments would be positive, these interactions would downward bias our estimates by causing positive spillovers from the treated to the pure control group. Yet, the bias deriving from the interactions among the two treated groups is less clear. We tried to account for these biases by asking in the follow-up survey if the respondent had discussed the activity with students in other classes, and, if so, from which classes. We used these answers to construct two dummy variables per each individual which report if they discussed the activity with someone from the Treatment 1 group (Game) and from the Treatment 2 group (2). The spillover dummies are NA when considering individual who were treated with the game (lecture) in a school were their class was the only one treated with the game (lecture). We include in some specifications these spillover dummies and heir interaction with the Treatment received. Nonetheless, only $11$ children who received the Treatment 1 (Game) and $9$ which received the Treatment 2 (Lecture) said that they have discussed the activity with someone from a different class. Because many treatment–spillover combinations are rare or unobserved, several coefficients are not identified and the clustered covariance matrix is not positive semi‑definite, requiring numerical adjustment. Consequently, we view these estimates as suggestive only.
+
+
+Results are reported in Table \ref{dif}. Column (1) presents estimates comparing each treatment arm to the pure control group, including fixed effects for schools and cohorts. The coefficient on the game treatment is positive but not statistically significant at conventional levels. By contrast, the lecture treatment displays a small and statistically insignificant negative effect. While the coefficients remain statistically insignificant when controlling for baseline characteristics (Column (2)), the game appears to have a positive and significant effect on behaviors when controlling also for spillovers among groups (Column (3)), while the lecture coefficient remains small and statistically indistinguishable from zero.
+
+
+Column (4) and (5) restrict the sample to treated students only and directly compare the game and lecture interventions. The estimated coefficient on the Game indicator is positive and statistically significant in both specifications, indicating that the game induces a larger behavioral change than the lecture-based intervention. This finding contrasts with the knowledge outcomes, for which the two treatments were similarly effective, and suggests that interactive, experiential learning may be particularly important for influencing short-run behavioral adjustments.
+
+\subfile{Results behavior/behavior_regression_table}
+
+When examining behavioral outcomes at the item level (Figure \ref{b single}, only one statistically significant difference relative to the control group emerges. Specifically, for the first question regarding how often children let the water run while washing their hands, the game intervention is associated with a positive and statistically significant change, indicating that the treated children were more likely to close the tap after playing the game. No comparable effect is observed for the lecture intervention.
+
+For all remaining behavioral items, neither treatment yields statistically significant effects when considered individually. However, analysis of the aggregated self-reported behavior index reveals a significant difference between the game and lecture interventions. The coefficient plot in Figure \ref{b single} helps to clarify this result. While the game treatment is associated with small positive or null changes across several behaviors, the lecture treatment displays slightly negative point estimates for some items—most notably for talking with friends about water conservation (Q5). As a consequence, the difference observed in the aggregate index appears to be driven less by strong positive behavioral changes induced by the game, and more by a relative decline in self-reported behaviors among students exposed to the lecture.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Results behavior/behavior_questions_bonferroni_plot.pdf}
+    \caption{\textbf{Effects of the educational interventions on self-reported behaviors} This figure reports OLS coefficients from separate regressions estimated for each behavioral outcome (Q1–Q5), measured as the post–pre difference in individual responses. Points represent treatment effects relative to the control group, while horizontal bars denote 95\% confidence intervals based on standard errors clustered at the classroom level. All specifications include individual controls, as well as school and cohort fixed effects. The dashed vertical line indicates zero effect.}
+    \label{b single}
+\end{figure}
+
+
+
+To study treatment effects on attitudes, we use a multinomial logit difference-in-differences specification, where each attitude question takes three unordered values: \textit{No}, \textit{Don't know}, and \textit{Yes}. Let $Y_{iqt} \in \{0,1,2\}$ denote the response of individual $i$ to attitude question $q$ at time $t \in \{\text{PRE},\text{POST}\}$. Taking \textit{No} as the base category, we estimate for each non-reference outcome $m \in \{\text{Don't know}, \text{Yes}\}$ the model
+
+\begin{equation}
+\begin{aligned}
+V_{iqtm}={}&
+\alpha_{qm}
++\beta_{qm}\,\text{Post}_t
++\gamma_{qm}^{L}L_i
++\gamma_{qm}^{G}G_i \\
+&+\delta_{qm}^{L}(\text{Post}_t\times L_i)
++\delta_{qm}^{G}(\text{Post}_t\times G_i)
++X_{it}'\theta_{qm}, \\
+& m\in\{\text{DK},\text{Yes}\}.
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\Pr(Y_{iqt}=m\mid X_{it})
+=
+\frac{\exp(V_{iqtm})}
+{1+\sum_{r\in\{\text{DK},\text{Yes}\}}\exp(V_{iqtr})}.
+\end{equation}
+
+The coefficients of interest are the interaction terms $\delta_{qm}^{L}$ and $\delta_{qm}^{G}$, which capture the difference-in-differences effects of the Lecture and Game treatments, respectively. In nonlinear models, however, interaction coefficients should not be interpreted directly as marginal treatment effects, so we treat them as reduced-form indicators of differential post-treatment shifts in the relative log-odds and complement them with predicted-probability comparisons in the discussion (Ai and Norton, 2003; Athey and Imbens, 2006). To account for multiple testing, we apply Bonferroni corrections separately to two pre-specified families of hypotheses: (i) the six Lecture interaction coefficients, pooling the \textit{Yes} and \textit{Don't know} equations across the three attitude outcomes, and (ii) the corresponding six Game interaction coefficients. This approach follows the standard family-wise error-rate logic for multiple comparisons. 
+
+
+Tables \ref{tab:attitudes_two_panel} reports regression estimates for changes in students’ attitudes across three dimensions: cooperation, perceived saliency of water-related technologies, and perceived proximity of extreme climate events.
+
+It appears that the Treatments were not effective in inducing a shift towards positive attitudes. The only coefficient which is staistically significant indicate that, relative to the control group, the lecture treatment increased the post-intervention relative log-odds of answering \textit{Don't know} rather than \textit{No} to the cooperation question. This is consistent with greater uncertainty or reduced confidence in the negative response, although in a multinomial logit this interaction coefficient should not be interpreted directly as a probability effect. The effect is driven by the change in one response which shifted from 'No' to 'Don't know' in he Post period. On the opposite side, compared to the Lecture, the Game Treatment was effective in reducing the uncertainty regarding cooperation; among the 5 children who replied 'Don't know' in the Pre period, 4 of them shifted towards 'Yes'.
+
+
+\subfile{Results attitudes/attitudes_multinom_two_panel}
+
+\subsection{Mechanism}
+
+To better understand the mechanisms that may explain differences in acquired knowledge and changes in behavior, we administered a set of questions in the first post-treatment survey focusing on students’ perceptions of the activity, both in the lecture and in the game conditions. Following the framework proposed by \cite{mayer2012towards}, we identify four main channels that may shape the learning experience. Each channel is measured using items evaluated on a 5-point Likert scale, with higher values indicating stronger agreement.
+Specifically, we consider the following mechanisms, which correspond to the outcomes reported in each column of the regression table:
+\begin{enumerate}
+\item \textit{Appreciation for the activity}. This mechanism is measured through two items:
+(1) “Did you have fun during the activity?” and
+(2) “Did you enjoy the activity?”
+
+\item \textit{Competitiveness and cooperation}. This channel is captured by two items:  
+(3) “Did you feel in competition with your classmates?” and  
+(4) “Did you collaborate with your classmates?”  
+
+\item \textit{Appreciation for the design}. This mechanism is measured by the item:  
+(5) “Did you like the drawings in the game or the slides?”  
+
+\item \textit{Social interactions}. This channel is measured through two items:  
+(6) “Did you enjoy talking to your classmates during the activity?” and  
+(7) “Did you enjoy talking to the person who explained?”
+\end{enumerate}
+These questions were administered exclusively to treated students. To assess differences in responses between the game and lecture arms, we estimate ANCOVA models (reported in the Appendix) as well as the following OLS specification:
+
+\[ Mechanism_{i,c,k,s} = \beta_0 + \beta_1 D_c + \beta_2\textbf{X}_{i,c,k,s} + \phi_s + \psi_k + \eta_{i,c,s} \]
+
+where $D_c$ is an indicator for assignment to the game treatment, $\mathbf{X}_{i,c,k,s}$ denotes a vector of individual-level controls, and $\phi_s$ and $\psi_k$ represent school and cohort fixed effects, respectively.
+
+\subfile{Results mechanisms/mechanisms_bonferroni_table}
+
+Overall, the estimates in \ref{tab:mechanisms_bonferroni} show that the game does not systematically outperform the lecture along most experiential dimensions. However, this absence of strong differences should not be interpreted as evidence of low engagement or poor performance of the game. Rather, the descriptive statistics reveal that mean values in the lecture arm are already very high across most mechanisms, often close to the upper bound of the scale. For instance, both treatments score above 4.5 in terms of fun (4.52 in the game vs. 4.54 in the lecture) and enjoyment of the activity (4.54 vs. 4.61), leaving little room for further improvements in the game condition.
+A similar pattern emerges for other dimensions related to engagement and appreciation of the materials. Students report high levels of enjoyment in talking with classmates (4.18 in the game vs. 3.92 in the lecture) and of visual appreciation (4.30 vs. 4.51), as well as high satisfaction with the person delivering the activity (4.14 vs. 4.44). Given that these outcomes are bounded between 1 and 5, even moderate differences across instructional formats are mechanically constrained.
+Taken together, these results suggest that the lack of a clear advantage of the game over the lecture in terms of acquired knowledge is unlikely to stem from inferior experiential quality of the game. Instead, it reflects the fact that the lecture itself performs remarkably well along most dimensions, reaching levels close to the top of the Likert scale.
+
+
+Participants' evaluation of the game in terms of gamer experience (see \ref{mec_control}) did not seem to correlate with the level of learning achieved, as other studies have already found \cite{garcia2025evaluating}, except for "Competition" which seems to be positive correlated with the acquired knowledge.
+
+%\subsection{Investigative results}
+%1. How much each mechanisms explains the effect on knowledge (ols regression)
+%2. Eterogeneità
+%3. Text analysis
+
+\subsection{Robustness checks}
+To assess whether our findings on acquired knowledge are sensitive to the scoring of open-ended questions, we conduct a set of robustness checks using alternative scoring schemes. In the first specification (Table \ref{rob}, Columns (1) and (2)), we assign a score ranging from 0 to 1 to each open-ended question; in the second specification (Columns (3) and (4)), we assign a score ranging from 0 to 3 (see \ref{chat} for the methodology). In both cases, the overall knowledge index is constructed by summing the score assigned to the open-ended questions with the binary score from the multiple-choice items.
+We then re-estimate the main regression specification using these alternative outcome measures.
+
+\subfile{Results knowledge/knowledge_robustness_alternative_outcomes}
+
+The results indicate that the estimated treatment effects are not sensitive to the scoring of the open-ended questions. In particular, under both alternative scoring schemes, the difference between the lecture and the game treatments remains statistically insignificant.
+
+\subfile{Results knowledge/knowledge_fraction_robustness_table}
+
+As an additional robustness check, we re-estimate our main specification using two alternative aggregate knowledge measures. First, we construct a fraction-based score that normalizes each question by the total number of possible answers, so that correct responses are weighted by the size of the answer set and open-ended questions are rescaled by their maximum score. Second, we build a measure that excludes explicit “I don’t know” responses from the denominator, thus capturing performance conditional on attempting the question.
+
+The results are broadly consistent with the main findings. When knowledge is measured as the fraction over all possible answers, both the Lecture and Game treatments remain positive and statistically significant relative to the control group, with coefficients of similar magnitude. When we instead exclude “I don’t know” responses from the denominator, the point estimates remain positive but become less precisely estimated, especially in the Lecture-versus-Game comparison, suggesting that the main treatment effect is robust but partly reflects differences in both accuracy and response behavior. Conditional on answering, the Game treatment appears to lead to more precise responses than the Lecture Group, compared to our Control.
+
+\subfile{Results behavior/behavior_robustness_table}
+
+To account for potential spillovers among treatment arms, we run the regression on the differences on behavior but excluding the children who said in the Post treatment survey that they had discussed the activity with someone outside their class. Interestingly, while the Game still leads to a significant increase in pro-environmental behavior compared to the Lecture, the Lecture appears to have a negative effect compared to the control group. Since we could consider talking about the activity as a proxy for the level of engagement, this result might suggest that within the Lecture group, those who were less engaged saw a decrease in their pro-environmental behavior. Yet, descriptive evidences (see \ref{spill_des}) show that the subgroup who perform worse in terms of behavioral change are those in he Lecture group who interacted with someone outside their own class.
+
+%Discussion
+
+\section{Discussion and Conclusion}
+\label{Disc}
+%Summary of results
+Overall, our results indicate that while both interventions successfully improve knowledge, only the game-based treatment translates into measurable short-run behavioral changes.
+
+Although we do not find evidence that the game-based intervention outperforms the lecture in terms of acquired knowledge, the absence of a significant difference between the two treatments is informative in itself. In particular, it suggests that alternative pedagogical formats can achieve comparable learning outcomes, thereby expanding students’ learning opportunities beyond traditional instruction.
+
+The game appears instead to be more effective than the lecture to convey a change in self-declared water conservation behaviors. This pattern reinforces the idea that active engagement may be more effective than passive instruction when the objective is to influence behavior rather than the mere acquisition of information.
+
+The absence of statistically significant differences between the game and the lecture across the experiential mechanisms indicates that both interventions were similarly engaging. Descriptive evidence confirms that the lecture was highly appreciated by students, reaching levels comparable to those observed for the game. A plausible explanation is that the lecture differed substantially from standard classroom instruction: it was delivered not by regular class teachers, but by two researchers with a strong interest and expertise in environmental sustainability.  Their interest in the topics covered might have positively impacted the participation in the class, as supported by the literature that shows that perceived teacher support can positively influence the participation of the students and the learning outcomes \cite{zhang2025relationship, strati2017perceived}.
+
+%Policy implications
+Game-based interventions may offer advantages in terms of scalability and cost-effectiveness. While lectures often involve higher fixed costs and may be difficult to replicate frequently, once developed, educational games can be easily replicated across schools, administered multiple times, and implemented with limited marginal costs, reducing reliance on highly specialized instructors. This makes them particularly suitable for large-scale educational programs aimed at young students. While the lecture requires the presence of a teacher and creates a context where children are coerced to learn new contents, game-based learning leverages intrinsic characteristics of the game to spread the same contents with an epidemic structure. Moreover, educational research emphasizes that learning is enhanced by repetition, planned redundancies, multiple modalities, rewards, active engagement, and visualizations \cite{friedlander2011can}. Game-based learning environments naturally incorporate many of these features, which may make them particularly well suited for the dissemination of environmental knowledge \cite{janakiraman2018using}. Regarding repetition in particular, there is evidence that game elements suffer from the novelty effect since their impact decreases over time, but might also benefit from the familiarization effect, which contributes to an overall positive impact on students \cite{rodrigues2022gamification, tsay2020overcoming}.
+
+
+%Limitations and future research
+Yet, it should be kept in mind that our experiment is run on a convenience sample, which is not representative of the overall population of interest and it might have less external validity. Nonetheless, we showed that the schools included in our sample are heterogeneous.
+
+Another limit to this study is that we do not controlled for the activities done in the classes before the experiment or within the two weeks following the treatment. If the control group had followed a class on the same topics covered by our intervention, it might have receive a similar treatment which would have caused a positive effect, creating a downward bias in our results. If a similar class has been followed by the treated children, this would have created a \enquote{reminder} effect which might have instead upward biased our results.
+
+Moreover, the presence of non-ordinary instructors and their enthusiasm for the topic may have increased students’ attention and engagement, thereby narrowing the expected experiential gap between the lecture and the game. Future research could explore this mechanism more directly by comparing lectures delivered by class teachers with game-based activities administered by teachers themselves or autonomously played by students.
+
+Finally, our design does not allow us to test for joint or sequential effects of lectures and games. A combination of in-class instruction followed by a game-based activity may generate complementarities, enabling students to first acquire theoretical knowledge and subsequently reinforce it through experiential learning. Future research should explicitly test whether these advantages translate into stronger or more persistent learning effects over longer time horizons.
+
+%Focus group
+During the focus group, the class generally reported to have been more engaged with the game rather than the lecture. Among the reasons they explained, which included the possibility to interact with their peers, one of the children said that he also appreciated the feeling of holding the cards in his hands, how the paper felt. Aesthetic and material qualities of learning resources might act as social signals of care and value, shaping children's’ emotional responses and willingness to engage. Appealing, carefully designed materials are perceived as more credible and user‑friendly, which in turn increases attention, motivation, and persistence with the learning task \cite{david2010impact}.
+Among the mechanisms we have tested, we did not considered multisensory education, which can bring a significant benefit to the learning process \cite{volpe2019multisensory}. Multisensory education is conceived as an instructional method using visual, auditory, kinesthetic, and tactile ways to educate students. It might be interesting for future researches to test how this aspect might influence the learning process.
+
+%Conclusion
+Beyond immediate learning and behavioral effects, the game was explicitly designed to convey which behaviors and technologies can reduce water consumption or increase water harvesting, such as efficiency measures and urban water-accumulation solutions. By exposing children early to these concepts, game-based learning may contribute to the formation of long-term preferences and social norms that support sustainable water policies. In this sense, educational games can play a role in building societal consensus around policy interventions that may entail short-term costs or spatial trade-offs, but generate long-term collective benefits.
+
+Overall, integrating game-based learning into environmental education policies represents a promising strategy to foster both informed and socially supported transitions toward sustainable water management.
+
+
+
+%% Refer following link for more details.
+%% https://en.wikibooks.org/wiki/LaTeX/Mathematics
+%% https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics
+
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+\clearpage
+\appendix
+\section{Appendix Section}
+\subsection{Results 1 - ANOVA, ANCOVA and Tukey test}
+\label{anova}
+
+This appendix reports distributional diagnostics for the aggregated knowledge score. Although ANOVA and ANCOVA are generally robust to moderate deviations from normality, we examine the distribution of outcomes across treatment arms to motivate the complementary use of non-parametric tests and robust inference methods in the main text.
+Shapiro–Wilk tests indicate that the null hypothesis of normality cannot be rejected for the Control group (p = 0.20), while normality is rejected for both treatment groups (Lecture: p = 0.011; Game: p = 0.001). These departures from normality are consistent with treatment-induced shifts in the distribution of scores and potential ceiling effects.
+Levene’s test for equality of variances does not reject the null of homoskedasticity across groups (p = 0.69), suggesting that differences in variances are unlikely to drive the estimated treatment effects. Taken together, these diagnostics support the use of linear models with clustered standard errors alongside non-parametric tests, rather than reliance on a single parametric specification. 
+
+Figure \ref{Kruskal} displays the distribution of the aggregated post-treatment knowledge score by treatment group. The distributions reveal clear differences between the Control group and both treatment arms, with treated students exhibiting higher median scores and a rightward shift of the entire distribution. In contrast, the distributions of the game and lecture groups overlap substantially.
+Formal non-parametric tests confirm these visual patterns. A Kruskal–Wallis test rejects the null hypothesis of equal distributions across the three groups $( \chi²(2) = 47.76, p < 0.001)$, with a moderate-to-large ordinal effect size $(\epsilon² = 0.21)$. Pairwise comparisons with Holm-adjusted p-values indicate statistically significant differences between each treatment arm and the Control group, while the difference between the Game and Lecture treatments is not statistically significant.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Results knowledge/kruskal-wallis_plot.pdf}
+    \caption{\textbf{Distribution of post-treatment knowledge scores by treatment group.}
+The figure shows violin plots of the aggregated post-treatment knowledge score for the Control, Game, and Lecture groups. Boxes indicate interquartile ranges, horizontal lines denote medians, and points represent individual observations. Differences across groups are assessed using a Kruskal–Wallis test, which rejects the null hypothesis of equal distributions $(\chi²(2) = 47.76, p < 0.001)$. Pairwise comparisons with Holm-adjusted p-values indicate statistically significant differences between each treatment group and the Control group, while the difference between the Game and Lecture groups is not statistically significant.}
+    \label{Kruskal}
+\end{figure}
+
+\subfile{Results knowledge/anova_tukey_knowledge}
+\subfile{Results knowledge/ancova_tukey_knowledge}
+\subfile{Results knowledge/ancova_selfperceived_knowledge} %rivedere
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Results knowledge/ANCOVA_Mechanisms.pdf}
+    \caption{\textbf{Adjusted mean differences from ANCOVA models for each mechanism identified}. The model includes controls, school and cohort fixed effects.}
+    \label{fig:placeholder}
+\end{figure}
+\clearpage
+
+\subsection{Results 2 - Multilevel regression model}
+\label{multilevel}
+
+Children within the same class are often more alike than two randomly chosen subjects, in particular because they share the same teachers. If the teacher has a proactive attitudes toward environmental education or serious games, i could introduce some bias in our results. While we do account for such bias in our experiment design letting also the control group to be self-selected, multilevel regression models can be used to account for the hierarchical structure of our data, allowing the intercept and the slope of the coefficient of interest to vary between different classes. Said methods are used to correct traditional statistical methods which ignore the correlation of outcomes within clusters, which might underestimate standard errors \cite{Lisamixed2021, austin2001introduction}.
+We report the pre-registered multilevel specification in this appendix for transparency; however, the model produced convergence warnings, so these estimates should be interpreted with caution. Accordingly, we treat this specification as supplementary evidence.
+
+The results on the Knowledge effect obtained with the multilevel regression model (Table\ref{multi}) confirm the main results. The effect of both the lecture and the game is positive and significant compared to the control group, while the comparison between the two treatment shows that the lecture performed slightly better than the game, even tough the effect is not significant. 
+
+\subfile{Results knowledge/multilevel_regression_knowledge}
+
+\subsection{Results 3 - Mediator Effect of Mechanisms}
+\label{mec_control}
+\subfile{Results mechanisms/knowledge_mechanisms_controls_table}
+
+\subsection{Descriptive evidence of Spillover}
+\label{spill_des}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Results behavior/interaction_plot.pdf}
+    \caption{Change in Behavior (post - pre) among subgroups based on the treatment arm and if they talked about he activity with someone outside their own classroom.}
+    \label{fig:placeholder}
+\end{figure}
+
+\clearpage
+
+\subsection{Surveys}
+\label{survey}
+\includepdf[
+  pages=-,      % o pages=- per tutte
+  nup=2x1,         % 2 colonne, 1 riga
+  %landscape        % opzionale, spesso utile per A4 orizzontale
+]{Figures/Survey on Behavior and Attitudes (PRE).pdf}
+
+\includepdf[
+  pages=-,      % o pages=- per tutte
+  nup=2x1,         % 2 colonne, 1 riga
+  %landscape        % opzionale, spesso utile per A4 orizzontale
+]{Figures/Survey on Knowledge and Mechanisms.pdf}
+
+\includepdf[
+  pages=-,      % o pages=- per tutte
+  nup=2x1,         % 2 colonne, 1 riga
+  %landscape        % opzionale, spesso utile per A4 orizzontale
+]{Figures/Survey on Behaviors and Attitudes (POST).pdf}
+
+\clearpage
+
+\subsection{Lecture presentation}
+\includepdf[
+  pages=-,      % o pages=- per tutte
+  nup=2x1,         % 2 colonne, 1 riga
+  %landscape        % opzionale, spesso utile per A4 orizzontale
+]{Figures/Lecture.pdf}
+\clearpage
+
+\subsection{Use of ChatGPT for the Scoring of Open-Ended Responses}
+\label{chat}
+To construct the knowledge scores based on open-ended questions, we relied on a standardized evaluation procedure implemented using ChatGPT. The purpose of this approach was to ensure consistent and replicable scoring across a large number of student responses, while closely adhering to the educational content delivered during the intervention.
+
+For each open-ended question, ChatGPT was provided with (i) the exact wording of the question, (ii) the key information that students had received during the educational activities, and (iii) explicit scoring instructions. In the main specification, responses were scored on a three-point scale ranging from 0 (incorrect or irrelevant), to 1 (correct but incomplete), to 2 (correct and complete). The criteria for correctness and completeness were defined ex ante and reflected whether the response mentioned the relevant mechanisms emphasized during the activities. For example, in the question on green areas and climate-related events, responses were considered complete if they explicitly referred to both water absorption/infiltration in the case of floods and cooling or water retention through evapotranspiration in the case of droughts.
+
+
+For robustness checks, we implemented alternative scoring schemes. In the first robustness specification, ChatGPT assigned a binary score (0–1) indicating whether the response correctly linked the question to the relevant water-related mechanism. In the second robustness specification, responses were scored on a four-point scale (0–3), capturing increasing levels of quality and completeness, from incorrect or off-topic answers to responses explicitly mentioning key mechanisms and, when applicable, quantitative information discussed during the activities (e.g., the concept of virtual water or the amount of water required to produce a garment). For each robustness exercise, ChatGPT was instructed to apply clearly defined and question-specific scoring criteria and to output the assigned scores in a structured tabular format.
+
+Overall, this procedure allowed us to systematically translate qualitative open-ended responses into quantitative measures of knowledge using transparent and pre-specified criteria, while minimizing discretionary variation in scoring across responses.
+
+\clearpage
+\bibliographystyle{elsarticle-num} 
+\bibliography{cas-refs}
+
+\end{document}
+
+\endinput
+%%
+%% End of file `elsarticle-template-harv.tex'.
+
+

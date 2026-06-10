@@ -1,0 +1,48 @@
+\begin{table}[htbp]
+\centering
+\caption{Robustness checks on behavior excluding spillovers}
+\label{tab:behavior_robustness}
+\fontsize{7pt}{8.4pt}\selectfont
+\begin{tabular}{lcccc}
+\hline
+\hline
+\rule{0pt}{1.2em} & \multicolumn{2}{c}{\textbf{Full sample}} & \multicolumn{2}{c}{\textbf{Lecture vs Game}} \\
+\cline{2-3} \cline{4-5}
+\rule{0pt}{1.2em} & (1) & (2) & (3) & (4) \\
+\hline
+\multicolumn{1}{l}{\textbf{\rule{0pt}{1.2em}VARIABLES}} &  &  &  &  \\
+\hline
+\\
+Lecture & \num{0.059} & \num{0.019} &  &  \\
+ & (\num{0.389}) & (\num{0.406}) &  &  \\
+Game & \num{0.443} & \num{0.453} & \num{0.397} & \num{0.425} \\
+ & (\num{0.359}) & (\num{0.381}) & (\num{0.365}) & (\num{0.328}) \\
+Male &  & \num{-0.352} &  & \num{-0.394} \\
+ &  & (\num{0.426}) &  & (\num{0.492}) \\
+Prefer not to say the gender &  & \num{-0.889}* &  & \num{-0.799} \\
+ &  & (\num{0.447}) &  & (\num{0.808}) \\
+Age &  & \num{-0.147} &  & \num{-0.238} \\
+ &  & (\num{0.456}) &  & (\num{0.612}) \\
+Board games &  & \num{-0.176} &  & \num{-0.293} \\
+ &  & (\num{0.242}) &  & (\num{0.282}) \\
+Cognitive ability &  & \num{0.042} &  & \num{0.137} \\
+ &  & (\num{0.153}) &  & (\num{0.165}) \\
+Baseline knowledge &  & \num{0.105} &  & \num{-0.014} \\
+ &  & (\num{0.257}) &  & (\num{0.337}) \\
+\\
+\hline
+\rule{0pt}{1.2em}Fixed Effects & Yes & Yes & Yes & Yes \\
+Controls & No & Yes & No & Yes \\
+Spillovers excluded & Yes & Yes & Yes & Yes \\
+Bonferroni p-value (Lecture) &  &  &  &  \\
+Bonferroni p-value (Game) &  &  &  &  \\
+Num.Obs. & \num{174} & \num{174} & \num{136} & \num{136} \\
+R2 & \num{0.035} & \num{0.051} & \num{0.045} & \num{0.074} \\
+\\
+\hline
+\hline
+\end{tabular}
+{\begin{flushleft}\parbox{\textwidth}{\tiny \hspace*{0.1cm}
+\textit{Notes:}} Columns (1) and (2) report estimates for the full sample without spillover observations, while columns (3) and (4) restrict the sample to Lecture and Game only without spillovers. The reference category is Control in columns (1)-(2) and Lecture in columns (3)-(4). The outcome variable is the simple difference in the aggregate behavior index. Standard errors clustered at the \texttt{cluster\_id} level are reported in parentheses. For the treatment coefficients in the controlled specifications, significance markers are based on Bonferroni-adjusted p-values across the three robustness contrasts in columns (1)-(4). *** $p < 0.01$, ** $p < 0.05$, * $p < 0.1$.
+\end{flushleft}}
+\end{table}

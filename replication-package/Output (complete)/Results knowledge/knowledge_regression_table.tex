@@ -1,0 +1,48 @@
+\begin{table}[htbp]
+\centering
+\caption{Regression coefficients on knowledge}
+\label{tab:res_knowledge}
+\fontsize{7pt}{8.4pt}\selectfont
+\begin{tabular}{lccccc}
+\hline
+\hline
+\bottomrule
+\rule{0pt}{1.2em} & \multicolumn{2}{c}{\textbf{Full sample}} & \multicolumn{3}{c}{\textbf{Lecture vs Game}} \\
+\cline{2-3} \cline{4-6}
+\rule{0pt}{1.2em} & (1) & (2) & (3) & (4) & (5) \\
+\hline
+\emph{\textbf{}} & \multicolumn{4}{c}{Observed} & Self-assessed\\
+\multicolumn{1}{l}{\textbf{\rule{0pt}{1.2em}VARIABLES}} &  &  &  &  &  \\
+\hline
+\\
+Lecture & \num{3.248}*** & \num{3.347}*** &  &  &  \\
+ & (\num{0.671}) & (\num{0.689}) &  &  &  \\
+Game & \num{2.809}*** & \num{3.106}*** & \num{-0.336}* & \num{-0.209} & \num{-0.355}** \\
+ & (\num{0.632}) & (\num{0.695}) & (\num{0.167}) & (\num{0.194}) & (\num{0.122}) \\
+Male &  & \num{-0.069} &  & \num{-0.258} & \num{-0.108} \\
+ &  & (\num{0.376}) &  & (\num{0.387}) & (\num{0.167}) \\
+Prefer not to say the gender &  & \num{-0.361} &  & \num{0.175} & \num{0.181} \\
+ &  & (\num{0.422}) &  & (\num{0.636}) & (\num{0.190}) \\
+Age &  & \num{-0.107} &  & \num{-0.023} & \num{0.010} \\
+ &  & (\num{0.330}) &  & (\num{0.367}) & (\num{0.097}) \\
+Board games &  & \num{-0.004} &  & \num{-0.003} & \num{-0.003} \\
+ &  & (\num{0.107}) &  & (\num{0.109}) & (\num{0.045}) \\
+Cognitive ability &  & \num{0.252} &  & \num{0.394}* & \num{-0.007} \\
+ &  & (\num{0.199}) &  & (\num{0.203}) & (\num{0.103}) \\
+Baseline knowledge &  & \num{1.050}*** &  & \num{0.909}*** & \num{0.186} \\
+ &  & (\num{0.151}) &  & (\num{0.155}) & (\num{0.134}) \\
+\\
+\hline
+\rule{0pt}{1.2em}Fixed Effects & Yes & Yes & Yes & Yes & Yes \\
+Controls & No & Yes & No & Yes & Yes \\
+Num.Obs. & \num{225} & \num{208} & \num{177} & \num{170} & \num{164} \\
+R2 & \num{0.327} & \num{0.447} & \num{0.241} & \num{0.371} & \num{0.155} \\
+\\
+\bottomrule
+\hline
+\hline
+\end{tabular}
+{\begin{flushleft}\parbox{\textwidth}{\tiny \hspace*{0.1cm}
+\textit{Notes:}} Columns (1) and (2) report estimates for the full sample, while columns (3), (4) and (5) restrict the sample to Lecture and Game only. The reference category is Control in columns (1)-(2) and Lecture in columns (3)-(5). The outcome variable is the score obtained in the Knowledge survey in columns (1)-(4), and the self-assessed knowledge in column (5). Standard errors clustered at the \texttt{cluster\_id} level are reported in parentheses. For the treatment coefficients in the controlled specifications, significance markers are based on Bonferroni-adjusted p-values across the three main contrasts in columns (1) - (4). *** $p < 0.01$, ** $p < 0.05$, * $p < 0.1$.
+\end{flushleft}}
+\end{table}
