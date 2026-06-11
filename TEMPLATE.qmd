@@ -10,7 +10,7 @@ format:
 
 |  |   |
 | ---  |  -------|
-| ID  |  {{< var paper_id >}} |
+| ID  | 1 |
 | Author  |  Stella Lauro & Leonardo Boncinelli  |
 | Title  |   Building Early Support for Water Conservation Policies through Game-Based Learning |
 | Iteration |  {{< var round >}} |
