@@ -10,52 +10,14 @@ format:
 
 |  |   |
 | ---  |  -------|
-| ID  | 1 |
+| ID  | N/A |
 | Author  |  Stella Lauro & Leonardo Boncinelli  |
 | Title  |   Building Early Support for Water Conservation Policies through Game-Based Learning |
 | Iteration |  {{< var round >}} |
 
 
-> {REPLICATOR} Every line which looks like this one, that is, it starts with {REPLICATOR} and has this formatting (there is a grey bar on the left 👀), is an **instruction for the replicator**. When you are done with editing this file, _there should be no such line left_ - you should delete all of them.
-
-> {REPLICATOR} Next to {REPLICATOR} for you, the replicator, there are instructions for the authors/data editor. Those are labelled either {REQUIRED} or {SUGGESTED}. You should delete those *only if specifically instructed*.
-
-> {REPLICATOR}: You should look at additional [Step by step guidance from Data Editor for Replicators](https://jpe-reproducibility.github.io/jpereplicators)
-
-::: {.callout-tip}
-
-# {Replicator}: Glossary (delete this before you submit your report!)
-
-_A brief explanation of important terms, before we start!_
-
-1. Dropbox: a location where authors upload their package and where the journal office uploads pdfs of paper and appendix. You download the package from there via the URL contained in your assignment email.
-2. `gh`: Github.com.
-3. Github Repository (_repo_): The location on `gh` where we store the _code_ of a given package (not the data!). It is also the location where you should file an issue tagging `@jpedataeditor` in the text, in case you encounter any problems or have questions. The github repo associated with this package was in your assignment email for this package. Let me print it here again for you (keep a browser tab open): [{{< var repo >}}]({{< var repo >}})
-4. `round`: the iteration number of this package. Notice that on the repo, each iteration has their own branch. Notice that you start on `round1`.
-5. manuscript/paper: The PDFs of accepted paper and appendices, which we want to verify. You should copy both paper and appendix into the root of this repo
-
-:::
-
-
-Some useful information up front:
-
-- [JPE Data and Code Availability Policy](https://www.journals.uchicago.edu/journals/jpe/datapolicy)
-- [Step by step guidance from Data Editor for Authors](https://jpedataeditor.github.io/) 
-- [Template README](https://social-science-data-editors.github.io/template_README/)
-
-
-
-> {REPLICATOR} the file you are looking at lives in a git repository on your computer. You should place the repository in a location on your computer where you have read and write access (I would not put it on any cloud storage to avoid issues). 
-
-
-> {REPLICATOR} you will edit _this_ file (`./TEMPLATE.qmd`). It is the source of your report. The package of the authors lives in folder `replication-package/`. We call the lowest level of this repo (marked by the dot `.` in `./TEMPLATE.qmd`) the _root of the repo_. Do not get confused if the authors talk about the _root of their package_, which would be location `./replication-package/` in this case.
-
-
 
 # Summary
-
-> {REPLICATOR} **The Data Editor** will fill this part out. It will be based on any {REQUIRED} and {SUGGESTED} action items that the report makes a note of.
-
 
 In assessing compliance with our [Data and Code Availability Policy](https://www.journals.uchicago.edu/journals/jpe/datapolicy), our reproducibility team has identified the following issues, which we ask you to address:
 
@@ -64,8 +26,6 @@ In assessing compliance with our [Data and Code Availability Policy](https://www
 
 # General
 
-
-> {REPLICATOR} Check off the following sections/elements that you find in either the README provided by the authors, or in the authors' online appendix (rare).
 
 - [x] Data Availability and Provenance Statements
   - [x] Statement about Rights - Part 1: Right to use the data (e.g. *did the authors lawfully obtain the data*)
@@ -87,7 +47,6 @@ In assessing compliance with our [Data and Code Availability Policy](https://www
 
 # High-level Description of Research Project
 
-> {REPLICATOR} Tick all applicable boxes. You tick a box by placing an `x` between the square brackets (don't change anything else).
 
 *This research project...*
 
@@ -126,14 +85,12 @@ In assessing compliance with our [Data and Code Availability Policy](https://www
 - [ ] Authors (with affiliations) are listed in the same order as on the paper
 
 
-> {REQUIRED} Please review the title of the deposit as per our guidelines.
+Please review the title of the deposit as per our guidelines.
 
-> {REQUIRED} Please review authors and affiliations on the deposit. In general, they are the same, and in the same order, as for the manuscript; however, authors can deviate from that order.
+Please review authors and affiliations on the deposit. In general, they are the same, and in the same order, as for the manuscript; however, authors can deviate from that order.
 
 
 ## Stated Requirements
-
-> {REPLICATOR}: The authors may have specified specific requirements in terms of software, computer hardware, etc. Please list them here. This is **different** from the Computing Environment of the Replicator. You have the option to amend these with unstated requirements later. If all requirements are listed, check the box "Requirements are complete".
 
 - [ ] No requirements specified
 - [x] Software Requirements specified as follows:
@@ -170,8 +127,6 @@ The following packages are required. Install them with `install.packages(c(...))
 
 # Analyzing Data and Code Files
 
-> {REPLICATOR} Here I provide you with a list of what I identified as *data files* based on file endings. Please check the list and amend if there are obvious mistakes. Watch out for Personally Identifiable Information (PII)!
-
 {{< include generated/report-pii.md >}}
 
 {{< include generated/report-file-paths.md >}}
@@ -186,190 +141,116 @@ The following packages are required. Install them with `install.packages(c(...))
 
 ## Code description
 
-> {REPLICATOR}: Review the code (but do not run it yet). Identify programs that create "analysis files" ("data preparation code"). Identify programs that create tables and figures. Not every deposit will have separate programs for this.
-
-> {REPLICATOR}: Identify all **Figure, Table, and any in-text numbers**. Create a list, mapping each of them to a particular program and line number within the program (use [this template](package-output-map.xlsx)). Commit that list. You will come back to the list in your findings. IN THIS SECTION, point out only a summary description, including of shortcomings. E.g.
-
-> {REPLICATOR}: For example, you could write "There are four provided Stata do files, three Matlab .m files, including a "master.do"."
-> {REPLICATOR}: And you could list the issues you encounter:
-> {REPLICATOR}: - Table 5: could not identify code that produces Table 5
-> {REPLICATOR}: - Neither the program codes, nor the README, identify which tables are produced by what program.
+There are five sequential R scripts. 01. Data Cleaning.R prepares four analysis files from the raw Excel workbook. Scripts 02–05 generate 13 tables and six of the nine manuscript figures. Two figures are non-reproducible study materials, while interaction_plot.pdf has no corresponding code or deposited output.
 
 {{< include generated/report-cloc.md >}}
 
 
 - [ ] The replication package contains a "main" or "master" file(s) which calls all other auxiliary programs.
 
-> {REPLICATOR}: If the above checkbox for "main" file is NOT checked, leave the following SUGGESTION in the report!
+We strongly advise the use of a single (or a small number of) main control file(s) to automatically reproduce all figures and tables in the paper, without manual interaction.
 
-> {SUGGESTED} We strongly advise the use of a single (or a small number of) main control file(s) to automatically reproduce all figures and tables in the paper, without manual interaction.
-
-> NOTE: In-text numbers that reference numbers in tables do not need to be listed. Only in-text numbers that correspond to no table or figure need to be listed.
 
 ## Computing Environment of the Replicator
 
-> {REPLICATOR}: You are now running the code!
+- Mac Laptop M1 MacBook Air, MacOS 25.5.1, 16 GB of memory, (M1 Processor)
 
-> {REPLICATOR}: This might be automated, for now, please fill in manually. Remove examples that are not relevant, adjust examples to fit special circumstances. Some of this is available from the standard log output in Stata or R. Some frequently used details are below. Some of these details can be found as follows:
->
-> - (Windows) by right-clicking on "This PC"
-> - (Mac) Apple-menu > "About this Mac"
-> - (Linux) see code in `tools/linux-system-info.sh`
->
-> Some options are listed below. Choose the one that applies.
+- R 4.6.0
 
-- Mac Laptop M2 MacBook Pro, MacOS 10.14.6, 8 GB of memory, (M2 Processor, 8 cores)
-- RedCloud Servers: Intel Xeon Processor (Skylake) 3.09 GHz (18 processors), Installed Ram 176 GB, 64-bit operating system, x64-based processor
-- CCSS Cloud: Windows Server AMD EPYC 7763 64-Core Processor 2.44 GHz, 128GB
-- BioHPC Linux server, Rocky Linux 9.0, AMD Opteron Processor 6380 / 16 cores/ 125 GB memory (adjust as necessary from output of linux-system-info.sh)
-- WholeTale (describe the environment chosen)
-- CodeOcean (describe the type of capsule chosen) Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz (16 cores), 128 GB Memory
-- Bitbucket Pipelines, "Ubuntu 20.04.2 LTS", Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz, 8 cores, 9GB memory
-- Codespaces, "Ubuntu 20.04.2 LTS", Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz, 2 core, 8GB/ 4-core, 16GB/ 8-core, 32 GB/ 16-core, 64GB (choose appropriately)
-
-
-> {REPLICATOR}: Please also list the software you used (specific versions). List only the ones you used, add any not listed in the examples:
-
-- Stata/MP 18.0
-- Matlab R2022a
-- Intel Compiler 3.14152 (note: there is no such thing, so please verify the version!)
 
 # Replication
 
-> {REPLICATOR}: provide details about your process of accessing the code and data.
-> 
-> - Do NOT detail things like "I save them on my Desktop".
-> - DO describe actions that you did as per {REPLICATOR} ("I added a config.do")
-> - DO describe any other actions you needed to do ("I had to make changes in multiple programs"), without going into TOO much detail.
-> 
-> BUT:
-> 
-> - DO provide ENOUGH detail so that an author, without access to the logs, can understand what needed to be fixed, including a copy-paste of the error message.
-> - DO commit to git before EACH new run with corrected code.
-> - DO (after all debugging is completed) a full run through the data, top-to-bottom, once all bugs are fixed, using the approriate method (command line or right-click).
+- Ran code as per README, but the first step did not work. The Last step summarize() did not run because of errors in reading the data. 
 
-Example:
-
-- Downloaded code and data from dropbox.
-- Commited code to git repo.
-- Added the config.do generating system information.
-- Ran code as per README, but the third step did not work. (describe the problem HERE, and paste the full log in an issue on the github repo of this package - do not forget to add the tag @jpedataeditor whenever you open an issue!) 
 
 ```R
-error: command distinct unknown
+Error in `summarise()`:
+ℹ In argument: `difBehavior = COMPORTAMENTI[Periodo == "POST"] -
+  COMPORTAMENTI[Periodo == "PRE"]`.
+ℹ In group 1: `ID = ADRCRO.D'Azeglio.4A`.
+Caused by error:
+! `difBehavior` must be size 1, not 0.
+ℹ To return more or less than 1 row per group, use `reframe()`.
+Run `rlang::last_trace()` to see where the error occurred.
 ```
 
-- Had to add undocumented package `distinct` to the install portion of the config file. Ran again.
-- Code failed because of a typo in the name of the file "`superdata.dta`" (was: `superdta.dta`). Fixed. Ran again.
-- Code ran to completion. 
+- The file behaviour_long.cvs and Dif.csv were not saved in Data/Processed because of error in step 1. Had to copy from the Data/Processed(complete) output and run again.
 
-> {REPLICATOR}: You are done now with the actual replication task. We now move to writing your report.
 
 # Findings {#sec-findings}
 
-> {REPLICATOR}: Describe your findings both positive and negative in some detail, for each **Data Preparation Code, Figure, Table, and any in-text numbers**. You can re-use the Excel file created under *Code Description*. When errors happen, be as precise as possible. For differences in figures, provide both a screenshot of what the manuscript contains, as well as the figure produced by the code you ran. For differences in numbers, provide both the number as reported in the manuscript, as well as the number replicated. If too many numbers, contact your supervisor.
->
-> Screenshots are best added to this `.qmd` file via the VScode extension [markdown paste](https://marketplace.visualstudio.com/items/?itemName=telesoho.vscode-markdown-paste-image). You need to find out how your OS can screenshot to the system clipboard (on my mac I have to do shift+control+cmd+4 instead of only the usual shift+cmd+4 to achieve this). Once you took the screen shot, you can use the markdown paste extension to literally *paste* the image into this qmd. It will create a filename with a timestamp. I set the preferences for the extension (in hidden folder `.vscode`) so that your screenshots go to the `images/` folder automatically. You want to commit that folder together with this file. Go into the command console of VScode and type "Markdown Paste" and memorize the shortcut (or just hit enter). You can modify the filename - no need. You end up with something like this:
+The replication package includes five sequential R scripts. The first script performs data cleaning and generates four analysis datasets, while scripts 02–05 produce 13 tables and six of the nine manuscript figures. Two figures are non-reproducible study materials, and one figure, interaction_plot.pdf, has no corresponding code or deposited output.
+A main limitation of the package is the absence of a single master script that automatically runs the full replication workflow. The scripts must therefore be executed manually and sequentially.
+Following the README instructions, the first data-cleaning step failed during the summarise() operation. The error occurred because, for at least one ID group, the code attempted to compute the difference between POST and PRE values, but one of the required observations was missing, returning a vector of size 0 instead of size 1.
+As a result, the files behaviour_long.csv and Dif.csv were not generated in Data/Processed. To continue the replication, these files had to be copied manually from the Data/Processed(complete) folder. After this manual intervention, the remaining scripts could be run.
+No picture or tables discprepancies were found, but the replicator was not able to verify all tables and figures because of the error in step 1. 
 
-![DELETE THIS image FROM THE REPO before you commit](images/screenshot-20250627144043.png){width=80%}
-
-
-
-> If you can, add **textual output instead of screenshots**. I.e. if a script spits out an error, copy and paste the error into a code block (the thing delimited by three backticks ````` below), don't take a screen shot of your terminal. Here is an example (notice you should decorate the code block with the relevant language):
-
-```julia
-
-julia> using RES
-[ Info: Welcome to RES.jl
-[ Info: First tell us which journal you are handling in this session.
-❯❯❯ Which Journal are you working on? 
-  EJ, EctJ
-EJ
-[ Info: Setting up email
-[ Info: Running in production mode
-┌ Warning: not in test mode!
-└ @ RES ~/git/EJData/RES.jl/src/gsheets.jl:53
-Python error:
-PyError ($(Expr(:escape, :(ccall(#= /Users/floswald/.julia/packages/PyCall/1gn3u/src/pyfncall.jl:43 =# @pysym(:PyObject_Call), PyPtr, (PyPtr, PyPtr, PyPtr), o, pyargsptr, kw))))) <class 'google.auth.exceptions.RefreshError'>
-RefreshError('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
-  File "/Users/floswald/.julia/conda/3/aarch64/lib/python3.10/site-packages/google/oauth2/credentials.py", line 344, in refresh
-    ) = reauth.refresh_grant(
-  File "/Users/floswald/.julia/conda/3/aarch64/lib/python3.10/site-packages/google/oauth2/reauth.py", line 365, in refresh_grant
-    _client._handle_error_response(response_data, retryable_error)
-  File "/Users/floswald/.julia/conda/3/aarch64/lib/python3.10/site-packages/google/oauth2/_client.py", line 72, in _handle_error_response
-    raise exceptions.RefreshError(
-
+```R
+Error in `summarise()`:
+ℹ In argument: `difBehavior = COMPORTAMENTI[Periodo == "POST"] -
+  COMPORTAMENTI[Periodo == "PRE"]`.
+ℹ In group 1: `ID = ADRCRO.D'Azeglio.4A`.
+Caused by error:
+! `difBehavior` must be size 1, not 0.
+ℹ To return more or less than 1 row per group, use `reframe()`.
+Run `rlang::last_trace()` to see where the error occurred.
 ```
+
+The replicator was able to verify that the code produces output files with the same names as those cited in the README, but could not verify that the content of those files is correct.
+
 
 ## Missing Requirements
 
-> {REPLICATOR}: If the replication package contains Stata programs run `tools/Stata_scan_code/scan_packages.do`, ensuring that you update the global `codedir` first. If the data is accessible, add any packages not mentioned in the README to the `config.do` and paste the excel output as a table below. If the data is restricted-access and not obtainable in a reasonable amount of time, paste the excel output as a table below.
-
-> {REPLICATOR}: If it turns out that some requirements were not stated/ are incomplete (software, packages, operating system), please list the *missing* list of requirements here. Remove lines that are not necessary. If the stated requirements are complete, delete this entire section, including the [REQUIRED] tag at the end.
-
-- [ ] Software Requirements 
-  - [ ] Stata
-    - [ ] Version
-    - Packages go here
-  - [ ] Matlab
-    - [ ] Version
-  - [ ] R
-    - [ ] Version
-    - R packages go here
-  - [ ] Python
-    - [ ] Version
-    - Python package go here
-  - [ ] REPLACE ME WITH OTHER
-- [ ] Computational Requirements specified as follows:
-  - Cluster size, disk size, memory size, etc.
-- [ ] Time Requirements 
-  - Length of necessary computation (hours, weeks, etc.)
-
-> [REQUIRED] Please amend README to contain complete requirements. 
-
-You can copy the section above, amended if necessary.
 
 
 ## Data Preparation Code
 
-Examples:
-
-- Program `1-create-data.do` ran without error, output expected data
-- Program `2-create-appendix-data.do` failed to produce any output.
+- Program `01.Data Cleaning.R` failed to produce any output.
+- Program `02.Descriptove.R` run successfully.
+- Program `03.Knowledge and mechanisms.R` run successfully.
+- Program `04.Behaviour.R` run successfully.
+- Program `05.Attitudes.R` run successfully.
 
 ## Tables and Figures
 
-> {REPLICATOR}: Insert the filled-out `package-output-map.xlsx` here (complete the column `Reproduced?`), using the VS Code Plugins [Excel to Markdown table](https://marketplace.visualstudio.com/items?itemName=csholmq.excel-to-markdown-table). Then describe in more detail the issues that may have arisen.
+| Data Preparation Program | Dataset created                       | Reproduced? |                    |
+|--------------------------|---------------------------------------|-------------|--------------------|
+| Code/01. Data Cleaning.R | Data/Processed/Knowledge.csv          | 134         | yes                |
+| Code/01. Data Cleaning.R | Data/Processed/Attitudes.csv          | 198         | yes                |
+| Code/01. Data Cleaning.R | Data/Processed/Dif.csv                | 233         | yes                |
+| Code/01. Data Cleaning.R | Data/Processed/behavior_long.csv      | 251         | yes                |
+|                          |                                       |             |                    |
+| Figure/Table #           | Program                               | Line Number | Reproduced?        |
+| Figure 1                 | N/A - non-reproducible study material | N/A         | N/A - source image |
+| Figure 2                 | N/A - non-reproducible study material | N/A         | N/A - source image |
+| Table 1                  | Code/02. Descriptive.R                | 390         | yes                |
+| Figure 3                 | Code/02. Descriptive.R                | 107         | yes                |
+| Figure 4                 | Code/02. Descriptive.R                | 227         | yes                |
+| Table 2                  | Code/03. Knowledge and mechanisms.R   | 373         | yes                |
+| Figure 5                 | Code/03. Knowledge and mechanisms.R   | 485         | yes                |
+| Table 3                  | Code/04. Behavior.R                   | 278         | yes                |
+| Figure 6                 | Code/04. Behavior.R                   | 389         | yes                |
+| Table 4                  | Code/05. Attitudes.R                  | 482         | yes                |
+| Table 5                  | Code/03. Knowledge and mechanisms.R   | 529         | yes                |
+| Table 6                  | Code/03. Knowledge and mechanisms.R   | 596         | yes                |
+| Table 7                  | Code/03. Knowledge and mechanisms.R   | 776         | yes                |
+| Table 8                  | Code/04. Behavior.R                   | 434         | yes                |
+| Table A.9                | Code/03. Knowledge and mechanisms.R   | 1150        | yes                |
+| Figure A.7               | Code/03. Knowledge and mechanisms.R   | 1112        | yes                |
+| Figure A.8               | Code/03. Knowledge and mechanisms.R   | 1321        | yes                |
+| Table A.10               | Code/03. Knowledge and mechanisms.R   | 1198        | yes                |
+| Table A.11               | Code/03. Knowledge and mechanisms.R   | 1237        | yes                |
+| Table A.12               | Code/03. Knowledge and mechanisms.R   | 1449        | yes                |
+| Table A.13               | Code/03. Knowledge and mechanisms.R   | 1040        | yes                |
 
-Examples:
 
-- Table 1: Looks the same
-- Table 2: (contains no data)
-- Table 3: Minor differences in row 5, column 3, 0.003 instead of 0.3
 
-> {REPLICATOR}: For tables, simple comparisons can be listed out as above. More complex differences can be described by using screenshots of the original table and the reproduced table, highlighting the differences.
- 
-> {REPLICATOR}: Please provide a comparison with the paper when describing that figures look different. Use a screenshot for the paper, and the graph generated by the programs for the comparison. Reference the graph generated by the programs as a local file within the repository.
+- All outputs look the same.
 
-Example:
-
-- Figure 1: Looks the same
-- Figure 2: no program provided
-- Figure 3: Paper version looks different from the one generated by programs:
-
-::: {#fig-three layout-ncol=2}
-
-![Paper version](images/heman.png)
-
-![Replicated version](images/skeletor.png)
-
-Figure 3 [DELETE THIS FIGURE]
-
-:::
 
 ## In-Text Numbers
 
-> {REPLICATOR}: list page and line number of in-text numbers. If ambiguous, cite the surrounding text, i.e., "the rate fell to 52% of all jobs: verified".
+All in-text numbers are produced and verified.
 
 - [ ] In-text numbers not verified.
 
@@ -377,49 +258,33 @@ Figure 3 [DELETE THIS FIGURE]
 
 - [ ] There are in-text numbers, but they are not identified in the code
 
-- Page 21, line 5: Same
+Page 12, line 340 — same
+Page 14, line 389 — same
+Page 17, line 400 — same
+Page 17, line 410 — same
+Page 20, line 462 — same
+Page 22, line 495 — same
+Page 23, line 496 — same
+Page 29, line 576 — same
+Page 29, line 577 — same
+Page 29, line 580 — same
 
 ## Other Issues
-
-> {REPLICATOR}: List here any other issue that was not recalled previously. Delete the entire section if no additional issues were found. Don't forget to amend the examples provided. 
-
-
-Example:
-
-- Title of the Readme does not match title of the paper. 
-
-- One or multiple scripts include hard-coded numbers whose origin is unknown.
-
-- Readme recalls scripts that are not provided in the replication package. 
 
 
 # Classification
 
-> {REPLICATOR}: Make an assessment here.
->
-> Full reproduction can include a small number of apparently insignificant changes in the numbers in the table. Full reproduction also applies when changes to the programs needed to be made, but were successfully implemented.
->
-> Partial reproduction means that a significant number (>25%) of programs and/or numbers are different.
->
-> Note that if some data is confidential and not available, then a partial reproduction applies. This should be noted in the Reasons.
->
-> Note that when all data is confidential, it is unlikely that this exercise should have been attempted.
->
-> Failure to reproduce: only a small number of programs ran successfully, or only a small number of numbers were successfully generated (<25%). This also applies when all data is restricted-access and none of the **main** tables/figures are run.
-
 - [ ] full reproduction
-- [ ] full reproduction with minor issues
+- [x] full reproduction with minor issues
 - [ ] partial reproduction (see above)
 - [ ] not able to reproduce most or all of the results (reasons see above)
 
 ## Reason for incomplete reproducibility
 
-> {REPLICATOR}: mark the reasons here why full reproduciblity was not achieved, and enter this information in new issue on the github repo of this package. When results are fully reproduced, leave this section here, and mark "None".
-
 - [ ] None.
 - [ ] `Discrepancy in output` (either figures or numbers in tables or text differ)
 - [ ] `Bugs in code` that were fixable by the replicator (but should be fixed in the final deposit)
-- [ ] `Code missing`, in particular if it prevented the replicator from completing the reproducibility check
+- [x] `Code missing`, in particular if it prevented the replicator from completing the reproducibility check
   - [ ] `Data preparation code missing` should be checked if the code missing seems to be data preparation code
 - [ ] `Code not functional` is more severe than a simple bug: it prevented the replicator from completing the reproducibility check
 - [ ] `Software not available to replicator` may happen for a variety of reasons, but in particular (a) when the software is commercial, and the replicator does not have access to a licensed copy, or (b) the software is open-source, but a specific version required to conduct the reproducibility check is not available.
