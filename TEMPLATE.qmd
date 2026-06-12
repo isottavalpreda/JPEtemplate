@@ -217,8 +217,8 @@ The replicator was able to verify that the code produces output files with the s
 |--------------------------|---------------------------------------|-------------|--------------------|
 | Code/01. Data Cleaning.R | Data/Processed/Knowledge.csv          | 134         | yes                |
 | Code/01. Data Cleaning.R | Data/Processed/Attitudes.csv          | 198         | yes                |
-| Code/01. Data Cleaning.R | Data/Processed/Dif.csv                | 233         | yes                |
-| Code/01. Data Cleaning.R | Data/Processed/behavior_long.csv      | 251         | yes                |
+| Code/01. Data Cleaning.R | Data/Processed/Dif.csv                | 233         | no                |
+| Code/01. Data Cleaning.R | Data/Processed/behavior_long.csv      | 251         | no               |
 |                          |                                       |             |                    |
 | Figure/Table #           | Program                               | Line Number | Reproduced?        |
 | Figure 1                 | N/A - non-reproducible study material | N/A         | N/A - source image |
@@ -258,16 +258,6 @@ All in-text numbers are produced and verified.
 
 - [ ] There are in-text numbers, but they are not identified in the code
 
-Page 12, line 340 — same
-Page 14, line 389 — same
-Page 17, line 400 — same
-Page 17, line 410 — same
-Page 20, line 462 — same
-Page 22, line 495 — same
-Page 23, line 496 — same
-Page 29, line 576 — same
-Page 29, line 577 — same
-Page 29, line 580 — same
 
 ## Other Issues
 
